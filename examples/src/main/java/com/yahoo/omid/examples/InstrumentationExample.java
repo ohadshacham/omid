@@ -30,6 +30,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -51,7 +52,6 @@ public class InstrumentationExample {
         LOG.info("Parsing command line arguments");
         Configuration exampleConfig = Configuration.parse(args);
 
-
         String userTableName = exampleConfig.userTableName;
         byte[] family = Bytes.toBytes(exampleConfig.cfName);
         byte[] exampleRow1 = Bytes.toBytes("EXAMPLE_ROW1");
@@ -65,7 +65,7 @@ public class InstrumentationExample {
         org.apache.hadoop.conf.Configuration omidConfig = exampleConfig.toOmidConfig();
 
         LOG.info("Creating HBase Transaction Manager");
-        List<String> metricsConfigs = Collections.singletonList("csv:./monitoring.csv:5:SECONDS");
+        List<String> metricsConfigs = Arrays.asList(exampleConfig.metricsConfig.toString().split("\\s*,\\s*"));
         CodahaleMetricsProvider metricsProvider = CodahaleMetricsProvider.createCodahaleMetricsProvider(metricsConfigs);
         TransactionManager tm = HBaseTransactionManager.newBuilder()
                 .withConfiguration(omidConfig)
@@ -73,10 +73,10 @@ public class InstrumentationExample {
                 .build();
 
         LOG.info("Creating access to Transactional Table '{}'", userTableName);
-        try (TTable tt = new TTable(omidConfig, userTableName)) {
+        try (TTable txTable = new TTable(omidConfig, userTableName)) {
 
             for (int i = 0; i < 1000; i++) {
-                executeTransaction(userTableName, family, exampleRow1, exampleRow2, qualifier, dataValue1, dataValue2, tm, tt);
+                executeTransaction(tm, txTable, family, qualifier, exampleRow1, exampleRow2, dataValue1, dataValue2);
             }
         }
 
@@ -84,29 +84,35 @@ public class InstrumentationExample {
 
     }
 
-    private static void executeTransaction(String userTableName, byte[] family, byte[] exampleRow1, byte[] exampleRow2,
-                                           byte[] qualifier, byte[] dataValue1, byte[] dataValue2,
-                                           TransactionManager tm,
-                                           TTable tt) throws TransactionException, IOException, RollbackException {
+    private static void executeTransaction(TransactionManager tm,
+                                           TTable txTable,
+                                           byte[] family,
+                                           byte[] qualifier,
+                                           byte[] exampleRow1, byte[] exampleRow2,
+                                           byte[] dataValue1, byte[] dataValue2)
+            throws TransactionException, IOException, RollbackException
+    {
+
         Transaction tx = tm.begin();
         LOG.info("Transaction {} STARTED", tx);
 
         Put row1 = new Put(exampleRow1);
         row1.add(family, qualifier, dataValue1);
-        tt.put(tx, row1);
+        txTable.put(tx, row1);
         LOG.info("Transaction {} writing value in [TABLE:ROW/CF/Q] => {}:{}/{}/{} = {} ",
-                 tx, userTableName, Bytes.toString(exampleRow1), Bytes.toString(family),
-                 Bytes.toString(qualifier), Bytes.toString(dataValue1));
+                 tx, Bytes.toString(txTable.getTableName()), Bytes.toString(exampleRow1), Bytes.toString(family),
+                                    Bytes.toString(qualifier), Bytes.toString(dataValue1));
 
         Put row2 = new Put(exampleRow2);
         row2.add(family, qualifier, dataValue2);
-        tt.put(tx, row2);
+        txTable.put(tx, row2);
         LOG.info("Transaction {} writing value in [TABLE:ROW/CF/Q] => {}:{}/{}/{} = {} ",
-                 tx, userTableName, Bytes.toString(exampleRow2), Bytes.toString(family),
-                 Bytes.toString(qualifier), Bytes.toString(dataValue2));
+                 tx, Bytes.toString(txTable.getTableName()), Bytes.toString(exampleRow2), Bytes.toString(family),
+                                    Bytes.toString(qualifier), Bytes.toString(dataValue2));
 
         tm.commit(tx);
         LOG.info("Transaction {} COMMITTED", tx);
+
     }
 
 }

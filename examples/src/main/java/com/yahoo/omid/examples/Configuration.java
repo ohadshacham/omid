@@ -15,6 +15,7 @@
  */
 package com.yahoo.omid.examples;
 
+import com.beust.jcommander.IStringConverter;
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
 import com.beust.jcommander.ParameterException;
@@ -25,6 +26,11 @@ import com.yahoo.omid.tsoclient.TSOClient;
 import org.apache.hadoop.hbase.HBaseConfiguration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.concurrent.TimeUnit;
+import java.util.regex.Matcher;
+
+import static com.yahoo.omid.metrics.CodahaleMetricsProvider.CODAHALE_METRICS_CONFIG_PATTERN;
 
 class Configuration extends HBaseLogin.Config {
     private static final Logger LOG = LoggerFactory.getLogger(Configuration.class);
@@ -45,6 +51,10 @@ class Configuration extends HBaseLogin.Config {
     String userTableName = "MY_TX_TABLE";
     @Parameter(names = "-cf", description = "User table column family")
     String cfName = "MY_CF";
+    @Parameter(names = "-metricsConfig",
+               converter = MetricsConfigConverter.class,
+               description = "Format: REPORTER:REPORTER_CONFIG:TIME_VALUE:TIME_UNIT")
+    MetricsConfig metricsConfig = new MetricsConfig("console", "", 10, TimeUnit.SECONDS);
 
     // ----------------------------------------------------------------------------------------------------------------
     // Configuration creation
@@ -108,7 +118,56 @@ class Configuration extends HBaseLogin.Config {
                 .add("Commit Table", commitTableName)
                 .add("User table", userTableName)
                 .add("ColFam", cfName)
+                .add("Metrics Config", metricsConfig)
                 .toString();
     }
+
+    // ----------------------------------------------------------------------------------------------------------------
+    // Helper classes
+    // ----------------------------------------------------------------------------------------------------------------
+
+    static class MetricsConfig {
+
+        public String reporter;
+        public String reporterConfig;
+        public Integer timeValue;
+        public TimeUnit timeUnit;
+
+        public MetricsConfig(String reporter, String reporterConfig, Integer timeValue, TimeUnit timeUnit) {
+            this.reporter = reporter;
+            this.reporterConfig = reporterConfig;
+            this.timeValue = timeValue;
+            this.timeUnit = timeUnit;
+        }
+
+        @Override
+        public String toString() {
+            return reporter + ":" + reporterConfig + ":" + timeValue + ":" + timeUnit;
+        }
+
+    }
+
+    public static class MetricsConfigConverter implements IStringConverter<MetricsConfig> {
+
+        @Override
+        public MetricsConfig convert(String value) {
+
+            Matcher matcher = CODAHALE_METRICS_CONFIG_PATTERN.matcher(value);
+
+            if (matcher.matches()) {
+                return new MetricsConfig(matcher.group(1),
+                                         matcher.group(2),
+                                         Integer.valueOf(matcher.group(3)),
+                                         TimeUnit.valueOf(matcher.group(4)));
+            } else {
+                String msg = "Metrics specification " + value + " should have this format: " +
+                        "REPORTER:REPORTER_CONFIG:TIME_VALUE:TIME_UNIT where REPORTER=csv|slf4j|console|graphite";
+                throw new ParameterException(msg);
+
+            }
+        }
+
+    }
+
 
 }

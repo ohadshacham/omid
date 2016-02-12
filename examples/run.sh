@@ -22,7 +22,7 @@ function show_help() {
     # $ $0 <example> [ options ]
     #
     # where:
-    # - <example> can be [ basic | si ]
+    # - <example> can be [ basic | si | metrics ]
     # - [ options ] is a list of configuration options for the example that can be shown with the -help parameter
     #
     # Example execution:
@@ -100,7 +100,7 @@ case ${USER_OPTION} in
     si)
         java -Dlog4j.configuration=log4j.properties -cp $KLASSPATH com.yahoo.omid.examples.SnapshotIsolationExample "$@"
         ;;
-    in)
+    metrics)
         java -Dlog4j.configuration=log4j.properties -cp $KLASSPATH com.yahoo.omid.examples.InstrumentationExample "$@"
         ;;
     *)
