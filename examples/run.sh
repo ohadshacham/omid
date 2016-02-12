@@ -13,6 +13,7 @@ function show_help() {
     #
     # 1) basic -> Executes a transaction encompassing a multi-row modification in HBase
     # 2) si -> Shows how Omid preserves Snapshot Isolation guarantees when concurrent transactions access shared data
+    # 2) in -> Same as 'basic' + instrumentation
     #
     # See the source-code to get more details about each example.
     #
@@ -78,7 +79,7 @@ if [ -z ${HBASE_CONF_DIR+x} ]; then echo "WARNING: HBASE_CONF_DIR is unset"; els
 
 [ ! -f "omid-examples.jar" ] && fileNotFound
 
-KLASSPATH=omid-examples.jar:${SCRIPTDIR}:${HBASE_CONF_DIR}:${HADOOP_CONF_DIR}
+KLASSPATH=omid-examples.jar:./:${HBASE_CONF_DIR}:${HADOOP_CONF_DIR}
 
 for jar in ./lib/*.jar; do
     if [ -f "$jar" ]; then
@@ -94,10 +95,13 @@ USER_OPTION=$1
 shift
 case ${USER_OPTION} in
     basic)
-        java -cp $KLASSPATH com.yahoo.omid.examples.BasicExample "$@"
+        java -Dlog4j.configuration=log4j.properties -cp $KLASSPATH com.yahoo.omid.examples.BasicExample "$@"
         ;;
     si)
-        java -cp $KLASSPATH com.yahoo.omid.examples.SnapshotIsolationExample "$@"
+        java -Dlog4j.configuration=log4j.properties -cp $KLASSPATH com.yahoo.omid.examples.SnapshotIsolationExample "$@"
+        ;;
+    in)
+        java -Dlog4j.configuration=log4j.properties -cp $KLASSPATH com.yahoo.omid.examples.InstrumentationExample "$@"
         ;;
     *)
         show_help
