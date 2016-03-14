@@ -1,0 +1,5 @@
+16/03/14 18:13:08 [main] INFO tso.TestLongCache: Time in reseting cache of 10000000/32 elems/asoc 32ms
+ 16/03/14 18:13:08 [TestNGInvoker-testEntriesAge()] INFO tso.TestLongCache: Elapsed (ms): 29609.202
+ 16/03/14 18:13:08 [TestNGInvoker-testEntriesAge()] INFO tso.TestLongCache: Avg gap: 661.8881666666659
+ 16/03/14 18:13:08 [TestNGInvoker-testEntriesAge()] INFO tso.TestLongCache: Std dev gap: 591.4691635220777
+ 

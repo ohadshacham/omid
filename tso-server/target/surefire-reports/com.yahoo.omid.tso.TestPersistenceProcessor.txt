@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.yahoo.omid.tso.TestPersistenceProcessor
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.517 sec - in com.yahoo.omid.tso.TestPersistenceProcessor

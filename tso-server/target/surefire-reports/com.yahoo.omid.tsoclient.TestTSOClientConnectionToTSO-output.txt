@@ -1,0 +1,199 @@
+16/03/14 18:13:27 [main] INFO tsoclient.TestTSOClientConnectionToTSO: Starting ZK Server in port 45485
+ 16/03/14 18:13:28 [main] INFO tsoclient.TestTSOClientConnectionToTSO: ZK Server Started @ 127.0.0.1:45485
+ 16/03/14 18:13:28 [main] INFO omid.TestUtils: Creating Zookeeper Client connecting to localhost:45485
+ 16/03/14 18:13:28 [main] INFO omid.TestUtils: Connecting to ZK cluster LATENT
+ 16/03/14 18:13:28 [main] INFO imps.CuratorFrameworkImpl: Starting
+ 16/03/14 18:13:28 [main-EventThread] INFO state.ConnectionStateManager: State change: CONNECTED
+ 16/03/14 18:13:28 [main] INFO omid.TestUtils: Connection to ZK cluster STARTED
+ 16/03/14 18:13:29 [main] INFO tsoclient.TestTSOClientConnectionToTSO: /current-tso ZNode did not exist
+ 16/03/14 18:13:29 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO tso.TSOServer: Iterating over network interfaces, found 'eth0'
+ 16/03/14 18:13:30 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO tsoclient.TestTSOClientConnectionToTSO: Starting Initial TSO
+ 16/03/14 18:13:30 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO tso.ZKModule: Creating Zookeeper Client connecting to localhost:45485
+ 16/03/14 18:13:30 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO tso.ZKModule: Connecting to ZK cluster [LATENT]
+ 16/03/14 18:13:30 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO imps.CuratorFrameworkImpl: Starting
+ 16/03/14 18:13:30 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()-EventThread] INFO state.ConnectionStateManager: State change: CONNECTED
+ 16/03/14 18:13:30 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO tso.ZKModule: Connection to ZK cluster [STARTED]
+ 16/03/14 18:13:30 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO tso.LeaseManagementModule: Connection to ZK cluster [STARTED]
+ 16/03/14 18:13:30 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO tso.LeaseManager: LeaseManager 10.128.0.89:50742 initialized. Lease period 1000ms
+ 16/03/14 18:13:30 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO tso.PersistenceProcessor: Creating the persist processor with batch size 10000, and timeout 100ms
+ 16/03/14 18:13:30 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO tso.CommitHashMap: CellId -> CommitTS map created with [1000] buckets (32 elems/bucket)
+ 16/03/14 18:13:30 [TSOServer STARTING] INFO tso.LeaseManager: Path /omid/tso-lease ensured
+ 16/03/14 18:13:30 [TSOServer STARTING] INFO tso.LeaseManager: Path /omid/current-tso ensured
+ 16/03/14 18:13:30 [TSOServer STARTING] INFO tso.TSOServer: ********** TSO Server running **********
+ 16/03/14 18:13:31 [pool-13-thread-1] INFO tso.LeaseManager: 10.128.0.89:50742 got the lease (Master) Ver. 1/End of lease: 2016-03-14 18:13:32.351ms
+ 16/03/14 18:13:31 [tso-state-initializer] INFO tso.TSOStateManagerImpl: Reseting the TSO Server state...
+ 16/03/14 18:13:31 [tso-state-initializer] INFO tso.TimestampOracleImpl: Initializing timestamp oracle with timestamp 0
+ 16/03/14 18:13:31 [ts-persist-0] INFO tso.TimestampOracleImpl: Updating max timestamp: (previous:0, new:10000000)
+ 16/03/14 18:13:31 [tso-state-initializer] INFO tso.RequestProcessorImpl: Reseting RequestProcessor...
+ 16/03/14 18:13:31 [tso-state-initializer] INFO tso.CommitHashMap: CellId -> CommitTS map reset
+ 16/03/14 18:13:31 [tso-state-initializer] INFO tso.RequestProcessorImpl: RequestProcessor initialized with LWM 0 and Epoch 0
+ 16/03/14 18:13:31 [tso-state-initializer] INFO tso.TSOStateManagerImpl: New TSO Server state LWM 0/Epoch 0
+ 16/03/14 18:13:31 [tso-state-initializer] INFO tso.LeaseManager: TSO instance 10.128.0.89:50742 (Epoch 0) advertised through ZK
+ 16/03/14 18:13:31 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO omid.TestUtils: Host localhost:50742 is up...
+ 16/03/14 18:13:31 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO tsoclient.TestTSOClientConnectionToTSO: Finished loading TSO
+ 16/03/14 18:13:31 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO tsoclient.TestTSOClientConnectionToTSO: TSO registered in ZK with path /current-tso=6,8,1457979210330,1457979211380,1,0,0,0,19,0,6
+
+ 16/03/14 18:13:31 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO tsoclient.TSOClient: Connecting to TSO...
+ 16/03/14 18:13:31 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO zk.ZKUtils: Creating Zookeeper Client connecting to localhost:45485
+ 16/03/14 18:13:31 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO tsoclient.TSOClient: 	* Connecting to ZK cluster LATENT
+ 16/03/14 18:13:31 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO imps.CuratorFrameworkImpl: Starting
+ 16/03/14 18:13:31 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()-EventThread] INFO state.ConnectionStateManager: State change: CONNECTED
+ 16/03/14 18:13:31 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO tsoclient.TSOClient: 	* Connection to ZK cluster STARTED
+ 16/03/14 18:13:31 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO tsoclient.TSOClient: 	* Current TSO host:port found in ZK: 10.128.0.89:50742 Epoch 0
+ 16/03/14 18:13:31 [tsofsm-0] INFO tsoclient.TSOClient: Trying to connect to TSO [/10.128.0.89:50742]
+ 16/03/14 18:13:31 [New I/O client worker #1-1] INFO tsoclient.TSOClient: Connection to TSO [/10.128.0.89:50742] established. Channel [id: 0x5aa39301, /10.128.0.89:60076 => /10.128.0.89:50742]
+ 16/03/14 18:13:31 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO tsoclient.TestTSOClientConnectionToTSO: Start TS 1 
+ 16/03/14 18:13:32 [pool-13-thread-1] INFO tso.LeaseManager: Channel handler closed
+ 16/03/14 18:13:32 [TSOServer STOPPING] INFO tso.TSOServer: ********** TSO Server stopped successfully **********
+ 16/03/14 18:13:32 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO tsoclient.TestTSOClientConnectionToTSO: Initial TSO Server Stopped
+ 16/03/14 18:13:32 [tsofsm-0] INFO tsoclient.TSOClient: Trying to connect to TSO [/10.128.0.89:50742]
+ 16/03/14 18:13:32 [New I/O client boss #1] ERROR tsoclient.TSOClient: Failed connection attempt to TSO [/10.128.0.89:50742] failed. Channel [id: 0x0b05ad94]
+ 16/03/14 18:13:32 [New I/O client boss #1] ERROR tsoclient.TSOClient: Error on channel [id: 0x0b05ad94]
+ java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientSocketPipelineSink$Boss.connect(NioClientSocketPipelineSink.java:384)
+	at org.jboss.netty.channel.socket.nio.NioClientSocketPipelineSink$Boss.processSelectedKeys(NioClientSocketPipelineSink.java:354)
+	at org.jboss.netty.channel.socket.nio.NioClientSocketPipelineSink$Boss.run(NioClientSocketPipelineSink.java:276)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+16/03/14 18:13:32 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO tsoclient.TestTSOClientConnectionToTSO: Exception expected
+ 16/03/14 18:13:32 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO tsoclient.TestTSOClientConnectionToTSO: Re-Starting again the TSO
+ 16/03/14 18:13:32 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO tso.ZKModule: Creating Zookeeper Client connecting to localhost:45485
+ 16/03/14 18:13:32 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO tso.ZKModule: Connecting to ZK cluster [LATENT]
+ 16/03/14 18:13:32 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO imps.CuratorFrameworkImpl: Starting
+ 16/03/14 18:13:32 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()-EventThread] INFO state.ConnectionStateManager: State change: CONNECTED
+ 16/03/14 18:13:32 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO tso.ZKModule: Connection to ZK cluster [STARTED]
+ 16/03/14 18:13:32 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO tso.LeaseManagementModule: Connection to ZK cluster [STARTED]
+ 16/03/14 18:13:32 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO tso.LeaseManager: LeaseManager 10.128.0.89:50742 initialized. Lease period 1000ms
+ 16/03/14 18:13:32 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO tso.PersistenceProcessor: Creating the persist processor with batch size 10000, and timeout 100ms
+ 16/03/14 18:13:32 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO tso.CommitHashMap: CellId -> CommitTS map created with [1000] buckets (32 elems/bucket)
+ 16/03/14 18:13:32 [TSOServer STARTING] INFO tso.LeaseManager: Path /omid/tso-lease ensured
+ 16/03/14 18:13:32 [TSOServer STARTING] INFO tso.LeaseManager: Path /omid/current-tso ensured
+ 16/03/14 18:13:32 [TSOServer STARTING] INFO tso.TSOServer: ********** TSO Server running **********
+ 16/03/14 18:13:33 [pool-31-thread-1] INFO tso.LeaseManager: 10.128.0.89:50742 got the lease (Master) Ver. 2/End of lease: 2016-03-14 18:13:34.252ms
+ 16/03/14 18:13:33 [tso-state-initializer] INFO tso.TSOStateManagerImpl: Reseting the TSO Server state...
+ 16/03/14 18:13:33 [tso-state-initializer] INFO tso.TimestampOracleImpl: Initializing timestamp oracle with timestamp 0
+ 16/03/14 18:13:33 [tso-state-initializer] INFO tso.RequestProcessorImpl: Reseting RequestProcessor...
+ 16/03/14 18:13:33 [tso-state-initializer] INFO tso.CommitHashMap: CellId -> CommitTS map reset
+ 16/03/14 18:13:33 [tso-state-initializer] INFO tso.RequestProcessorImpl: RequestProcessor initialized with LWM 0 and Epoch 0
+ 16/03/14 18:13:33 [tso-state-initializer] INFO tso.TSOStateManagerImpl: New TSO Server state LWM 0/Epoch 0
+ 16/03/14 18:13:33 [tso-state-initializer] INFO tso.LeaseManager: TSO instance 10.128.0.89:50742 (Epoch 0) advertised through ZK
+ 16/03/14 18:13:33 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()-EventThread] INFO tsoclient.TSOClient: CurrentTSO ZNode changed. New TSO Host & Port 10.128.0.89:50742/Epoch 0
+ 16/03/14 18:13:33 [ts-persist-0] INFO tso.TimestampOracleImpl: Updating max timestamp: (previous:0, new:10000000)
+ 16/03/14 18:13:33 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO omid.TestUtils: Host localhost:50742 is up...
+ 16/03/14 18:13:33 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO tsoclient.TestTSOClientConnectionToTSO: Finished loading restarted TSO
+ 16/03/14 18:13:40 [pool-31-thread-1] INFO tso.LeaseManager: 10.128.0.89:50742 got the lease (Master) Ver. 11/End of lease: 2016-03-14 18:13:41.790ms
+ 16/03/14 18:13:40 [tso-state-initializer] INFO tso.TSOStateManagerImpl: Reseting the TSO Server state...
+ 16/03/14 18:13:40 [tso-state-initializer] INFO tso.TimestampOracleImpl: Initializing timestamp oracle with timestamp 10000000
+ 16/03/14 18:13:40 [tso-state-initializer] INFO tso.RequestProcessorImpl: Reseting RequestProcessor...
+ 16/03/14 18:13:40 [tso-state-initializer] INFO tso.CommitHashMap: CellId -> CommitTS map reset
+ 16/03/14 18:13:40 [tso-state-initializer] INFO tso.RequestProcessorImpl: RequestProcessor initialized with LWM 10000000 and Epoch 10000000
+ 16/03/14 18:13:40 [tso-state-initializer] INFO tso.TSOStateManagerImpl: New TSO Server state LWM 10000000/Epoch 10000000
+ 16/03/14 18:13:40 [ts-persist-0] INFO tso.TimestampOracleImpl: Updating max timestamp: (previous:10000000, new:20000000)
+ 16/03/14 18:13:40 [tso-state-initializer] INFO tso.LeaseManager: TSO instance 10.128.0.89:50742 (Epoch 10000000) advertised through ZK
+ 16/03/14 18:13:40 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()-EventThread] INFO tsoclient.TSOClient: CurrentTSO ZNode changed. New TSO Host & Port 10.128.0.89:50742/Epoch 10000000
+ 16/03/14 18:13:42 [tsofsm-0] INFO tsoclient.TSOClient: Trying to connect to TSO [/10.128.0.89:50742]
+ 16/03/14 18:13:42 [New I/O client worker #1-3] INFO tsoclient.TSOClient: Connection to TSO [/10.128.0.89:50742] established. Channel [id: 0x34416867, /10.128.0.89:60092 => /10.128.0.89:50742]
+ 16/03/14 18:13:42 [pool-31-thread-1] INFO tso.LeaseManager: Channel handler closed
+ 16/03/14 18:13:42 [TSOServer STOPPING] INFO tso.TSOServer: ********** TSO Server stopped successfully **********
+ 16/03/14 18:13:42 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()] INFO tsoclient.TestTSOClientConnectionToTSO: Restarted TSO Server Stopped
+ 16/03/14 18:13:42 [main] INFO tsoclient.TestTSOClientConnectionToTSO: ZK Server Stopped
+ 16/03/14 18:13:42 [main] INFO tsoclient.TestTSOClientConnectionToTSO: Starting ZK Server in port 35370
+ 16/03/14 18:13:42 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()-EventThread] INFO state.ConnectionStateManager: State change: SUSPENDED
+ 16/03/14 18:13:42 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()-EventThread] INFO state.ConnectionStateManager: State change: SUSPENDED
+ 16/03/14 18:13:42 [TestNGInvoker-testSuccessOfTSOClientReconnectionsToARestartedTSOWithZKPublishing()-EventThread] INFO state.ConnectionStateManager: State change: SUSPENDED
+ 16/03/14 18:13:43 [main] INFO tsoclient.TestTSOClientConnectionToTSO: ZK Server Started @ 127.0.0.1:35370
+ 16/03/14 18:13:43 [main] INFO omid.TestUtils: Creating Zookeeper Client connecting to localhost:35370
+ 16/03/14 18:13:43 [main] INFO omid.TestUtils: Connecting to ZK cluster LATENT
+ 16/03/14 18:13:43 [main] INFO imps.CuratorFrameworkImpl: Starting
+ 16/03/14 18:13:43 [main-EventThread] INFO state.ConnectionStateManager: State change: CONNECTED
+ 16/03/14 18:13:43 [main] INFO omid.TestUtils: Connection to ZK cluster STARTED
+ 16/03/14 18:13:43 [main] INFO tsoclient.TestTSOClientConnectionToTSO: /current-tso ZNode did not exist
+ 16/03/14 18:13:43 [TestNGInvoker-testSuccessfulConnectionToTSOThroughZK()] INFO tso.TSOServer: Iterating over network interfaces, found 'eth0'
+ 16/03/14 18:13:43 [TestNGInvoker-testSuccessfulConnectionToTSOThroughZK()] INFO tsoclient.TestTSOClientConnectionToTSO: Starting TSO
+ 16/03/14 18:13:43 [TestNGInvoker-testSuccessfulConnectionToTSOThroughZK()] INFO tso.ZKModule: Creating Zookeeper Client connecting to localhost:35370
+ 16/03/14 18:13:43 [TestNGInvoker-testSuccessfulConnectionToTSOThroughZK()] INFO tso.ZKModule: Connecting to ZK cluster [LATENT]
+ 16/03/14 18:13:43 [TestNGInvoker-testSuccessfulConnectionToTSOThroughZK()] INFO imps.CuratorFrameworkImpl: Starting
+ 16/03/14 18:13:43 [TestNGInvoker-testSuccessfulConnectionToTSOThroughZK()-EventThread] INFO state.ConnectionStateManager: State change: CONNECTED
+ 16/03/14 18:13:43 [TestNGInvoker-testSuccessfulConnectionToTSOThroughZK()] INFO tso.ZKModule: Connection to ZK cluster [STARTED]
+ 16/03/14 18:13:43 [TestNGInvoker-testSuccessfulConnectionToTSOThroughZK()] INFO tso.LeaseManagementModule: Connection to ZK cluster [STARTED]
+ 16/03/14 18:13:43 [TestNGInvoker-testSuccessfulConnectionToTSOThroughZK()] INFO tso.LeaseManager: LeaseManager 10.128.0.89:41069 initialized. Lease period 1000ms
+ 16/03/14 18:13:43 [TestNGInvoker-testSuccessfulConnectionToTSOThroughZK()] INFO tso.PersistenceProcessor: Creating the persist processor with batch size 10000, and timeout 100ms
+ 16/03/14 18:13:43 [TestNGInvoker-testSuccessfulConnectionToTSOThroughZK()] INFO tso.CommitHashMap: CellId -> CommitTS map created with [1000] buckets (32 elems/bucket)
+ 16/03/14 18:13:43 [TSOServer STARTING] INFO tso.LeaseManager: Path /omid/tso-lease ensured
+ 16/03/14 18:13:43 [TSOServer STARTING] INFO tso.LeaseManager: Path /omid/current-tso ensured
+ 16/03/14 18:13:43 [TSOServer STARTING] INFO tso.TSOServer: ********** TSO Server running **********
+ 16/03/14 18:13:44 [pool-45-thread-1] INFO tso.LeaseManager: 10.128.0.89:41069 got the lease (Master) Ver. 1/End of lease: 2016-03-14 18:13:45.716ms
+ 16/03/14 18:13:44 [tso-state-initializer] INFO tso.TSOStateManagerImpl: Reseting the TSO Server state...
+ 16/03/14 18:13:44 [tso-state-initializer] INFO tso.TimestampOracleImpl: Initializing timestamp oracle with timestamp 0
+ 16/03/14 18:13:44 [tso-state-initializer] INFO tso.RequestProcessorImpl: Reseting RequestProcessor...
+ 16/03/14 18:13:44 [tso-state-initializer] INFO tso.CommitHashMap: CellId -> CommitTS map reset
+ 16/03/14 18:13:44 [tso-state-initializer] INFO tso.RequestProcessorImpl: RequestProcessor initialized with LWM 0 and Epoch 0
+ 16/03/14 18:13:44 [ts-persist-0] INFO tso.TimestampOracleImpl: Updating max timestamp: (previous:0, new:10000000)
+ 16/03/14 18:13:44 [tso-state-initializer] INFO tso.TSOStateManagerImpl: New TSO Server state LWM 0/Epoch 0
+ 16/03/14 18:13:44 [tso-state-initializer] INFO tso.LeaseManager: TSO instance 10.128.0.89:41069 (Epoch 0) advertised through ZK
+ 16/03/14 18:13:44 [TestNGInvoker-testSuccessfulConnectionToTSOThroughZK()] INFO omid.TestUtils: Host localhost:41069 is up...
+ 16/03/14 18:13:44 [TestNGInvoker-testSuccessfulConnectionToTSOThroughZK()] INFO tsoclient.TestTSOClientConnectionToTSO: Finished loading TSO
+ 16/03/14 18:13:44 [TestNGInvoker-testSuccessfulConnectionToTSOThroughZK()] INFO tsoclient.TestTSOClientConnectionToTSO: TSO registered in ZK with path /current-tso=6,8,1457979223696,1457979224779,1,0,0,0,19,0,6
+
+ 16/03/14 18:13:44 [TestNGInvoker-testSuccessfulConnectionToTSOThroughZK()] INFO tsoclient.TSOClient: Connecting to TSO...
+ 16/03/14 18:13:44 [TestNGInvoker-testSuccessfulConnectionToTSOThroughZK()] INFO zk.ZKUtils: Creating Zookeeper Client connecting to localhost:35370
+ 16/03/14 18:13:44 [TestNGInvoker-testSuccessfulConnectionToTSOThroughZK()] INFO tsoclient.TSOClient: 	* Connecting to ZK cluster LATENT
+ 16/03/14 18:13:44 [TestNGInvoker-testSuccessfulConnectionToTSOThroughZK()] INFO imps.CuratorFrameworkImpl: Starting
+ 16/03/14 18:13:45 [TestNGInvoker-testSuccessfulConnectionToTSOThroughZK()-EventThread] INFO state.ConnectionStateManager: State change: CONNECTED
+ 16/03/14 18:13:45 [TestNGInvoker-testSuccessfulConnectionToTSOThroughZK()] INFO tsoclient.TSOClient: 	* Connection to ZK cluster STARTED
+ 16/03/14 18:13:45 [TestNGInvoker-testSuccessfulConnectionToTSOThroughZK()] INFO tsoclient.TSOClient: 	* Current TSO host:port found in ZK: 10.128.0.89:41069 Epoch 0
+ 16/03/14 18:13:45 [tsofsm-0] INFO tsoclient.TSOClient: Trying to connect to TSO [/10.128.0.89:41069]
+ 16/03/14 18:13:45 [New I/O client worker #2-1] INFO tsoclient.TSOClient: Connection to TSO [/10.128.0.89:41069] established. Channel [id: 0x7e39297d, /10.128.0.89:52616 => /10.128.0.89:41069]
+ 16/03/14 18:13:45 [TestNGInvoker-testSuccessfulConnectionToTSOThroughZK()] INFO tsoclient.TestTSOClientConnectionToTSO: Start TS 1 
+ 16/03/14 18:13:45 [pool-45-thread-1] INFO tso.LeaseManager: Channel handler closed
+ 16/03/14 18:13:45 [TSOServer STOPPING] INFO tso.TSOServer: ********** TSO Server stopped successfully **********
+ 16/03/14 18:13:45 [TestNGInvoker-testSuccessfulConnectionToTSOThroughZK()] INFO tsoclient.TestTSOClientConnectionToTSO: TSO Server Stopped
+ 16/03/14 18:13:45 [main] INFO tsoclient.TestTSOClientConnectionToTSO: ZK Server Stopped
+ 16/03/14 18:13:45 [main] INFO tsoclient.TestTSOClientConnectionToTSO: Starting ZK Server in port 35642
+ 16/03/14 18:13:45 [TestNGInvoker-testSuccessfulConnectionToTSOThroughZK()-EventThread] INFO state.ConnectionStateManager: State change: SUSPENDED
+ 16/03/14 18:13:46 [main] INFO tsoclient.TestTSOClientConnectionToTSO: ZK Server Started @ 127.0.0.1:35642
+ 16/03/14 18:13:46 [main] INFO omid.TestUtils: Creating Zookeeper Client connecting to localhost:35642
+ 16/03/14 18:13:46 [main] INFO omid.TestUtils: Connecting to ZK cluster LATENT
+ 16/03/14 18:13:46 [main] INFO imps.CuratorFrameworkImpl: Starting
+ 16/03/14 18:13:46 [main-EventThread] INFO state.ConnectionStateManager: State change: CONNECTED
+ 16/03/14 18:13:46 [main] INFO omid.TestUtils: Connection to ZK cluster STARTED
+ 16/03/14 18:13:46 [main] INFO tsoclient.TestTSOClientConnectionToTSO: /current-tso ZNode did not exist
+ 16/03/14 18:13:46 [TestNGInvoker-testSuccessfulConnectionToTSOWithHostAndPort()] INFO tso.TSOServer: Iterating over network interfaces, found 'eth0'
+ 16/03/14 18:13:46 [TestNGInvoker-testSuccessfulConnectionToTSOWithHostAndPort()] INFO tsoclient.TestTSOClientConnectionToTSO: Starting TSO
+ 16/03/14 18:13:46 [TestNGInvoker-testSuccessfulConnectionToTSOWithHostAndPort()] INFO tso.ZKModule: Creating Zookeeper Client connecting to localhost:2181
+ 16/03/14 18:13:46 [TestNGInvoker-testSuccessfulConnectionToTSOWithHostAndPort()] INFO tso.ZKModule: ZK Connection not necessary in this configuration
+ 16/03/14 18:13:47 [TestNGInvoker-testSuccessfulConnectionToTSOWithHostAndPort()] INFO tso.PersistenceProcessor: Creating the persist processor with batch size 10000, and timeout 100ms
+ 16/03/14 18:13:47 [TestNGInvoker-testSuccessfulConnectionToTSOWithHostAndPort()] INFO tso.CommitHashMap: CellId -> CommitTS map created with [1000] buckets (32 elems/bucket)
+ 16/03/14 18:13:47 [TSOServer STARTING] INFO tso.TSOStateManagerImpl: Reseting the TSO Server state...
+ 16/03/14 18:13:47 [TSOServer STARTING] INFO tso.TimestampOracleImpl: Initializing timestamp oracle with timestamp 0
+ 16/03/14 18:13:47 [TSOServer STARTING] INFO tso.RequestProcessorImpl: Reseting RequestProcessor...
+ 16/03/14 18:13:47 [ts-persist-0] INFO tso.TimestampOracleImpl: Updating max timestamp: (previous:0, new:10000000)
+ 16/03/14 18:13:47 [TSOServer STARTING] INFO tso.CommitHashMap: CellId -> CommitTS map reset
+ 16/03/14 18:13:47 [TSOServer STARTING] INFO tso.RequestProcessorImpl: RequestProcessor initialized with LWM 0 and Epoch 0
+ 16/03/14 18:13:47 [TSOServer STARTING] INFO tso.TSOStateManagerImpl: New TSO Server state LWM 0/Epoch 0
+ 16/03/14 18:13:47 [TSOServer STARTING] INFO tso.TSOServer: ********** TSO Server running **********
+ 16/03/14 18:13:47 [TestNGInvoker-testSuccessfulConnectionToTSOWithHostAndPort()] INFO omid.TestUtils: Host localhost:47151 is up...
+ 16/03/14 18:13:47 [TestNGInvoker-testSuccessfulConnectionToTSOWithHostAndPort()] INFO tsoclient.TestTSOClientConnectionToTSO: Finished loading TSO
+ 16/03/14 18:13:47 [TestNGInvoker-testSuccessfulConnectionToTSOWithHostAndPort()] INFO tsoclient.TSOClient: Connecting to TSO...
+ 16/03/14 18:13:47 [TestNGInvoker-testSuccessfulConnectionToTSOWithHostAndPort()] INFO tsoclient.TSOClient: 	* TSO host:port localhost:47151 will be connected directly
+ 16/03/14 18:13:47 [tsofsm-0] INFO tsoclient.TSOClient: Trying to connect to TSO [localhost/127.0.0.1:47151]
+ 16/03/14 18:13:47 [New I/O client worker #3-1] INFO tsoclient.TSOClient: Connection to TSO [localhost/127.0.0.1:47151] established. Channel [id: 0x40ed65ff, /127.0.0.1:54773 => localhost/127.0.0.1:47151]
+ 16/03/14 18:13:47 [TestNGInvoker-testSuccessfulConnectionToTSOWithHostAndPort()] INFO tsoclient.TestTSOClientConnectionToTSO: Start TS 1 
+ 16/03/14 18:13:47 [TSOServer STOPPING] INFO tso.TSOServer: ********** TSO Server stopped successfully **********
+ 16/03/14 18:13:47 [TestNGInvoker-testSuccessfulConnectionToTSOWithHostAndPort()] INFO tsoclient.TestTSOClientConnectionToTSO: TSO Server Stopped
+ 16/03/14 18:13:47 [main] INFO tsoclient.TestTSOClientConnectionToTSO: ZK Server Stopped
+ 16/03/14 18:13:47 [main] INFO tsoclient.TestTSOClientConnectionToTSO: Starting ZK Server in port 48304
+ 16/03/14 18:13:48 [main] INFO tsoclient.TestTSOClientConnectionToTSO: ZK Server Started @ 127.0.0.1:48304
+ 16/03/14 18:13:48 [main] INFO omid.TestUtils: Creating Zookeeper Client connecting to localhost:48304
+ 16/03/14 18:13:48 [main] INFO omid.TestUtils: Connecting to ZK cluster LATENT
+ 16/03/14 18:13:48 [main] INFO imps.CuratorFrameworkImpl: Starting
+ 16/03/14 18:13:49 [main-EventThread] INFO state.ConnectionStateManager: State change: CONNECTED
+ 16/03/14 18:13:49 [main] INFO omid.TestUtils: Connection to ZK cluster STARTED
+ 16/03/14 18:13:49 [main] INFO tsoclient.TestTSOClientConnectionToTSO: /current-tso ZNode did not exist
+ 16/03/14 18:13:49 [TestNGInvoker-testUnsuccessfulConnectionToTSO()] INFO tsoclient.TSOClient: Connecting to TSO...
+ 16/03/14 18:13:49 [TestNGInvoker-testUnsuccessfulConnectionToTSO()] INFO tsoclient.TSOClient: 	* TSO host:port localhost:54758 will be connected directly
+ 16/03/14 18:13:49 [main] INFO tsoclient.TestTSOClientConnectionToTSO: ZK Server Stopped
+ 

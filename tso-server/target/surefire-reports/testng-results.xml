@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="13" passed="13">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="12002" started-at="2016-03-14T18:13:40Z" finished-at="2016-03-14T18:13:52Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="12002" started-at="2016-03-14T18:13:40Z" finished-at="2016-03-14T18:13:52Z">
+      <class name="com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="setup" is-config="true" duration-ms="2187" started-at="2016-03-14T18:13:40Z" finished-at="2016-03-14T18:13:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="beforeMethod" is-config="true" duration-ms="2447" started-at="2016-03-14T18:13:43Z" finished-at="2016-03-14T18:13:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testCommitCanSucceedWhenChannelDisconnected()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="testCommitCanSucceedWhenChannelDisconnected" duration-ms="785" started-at="2016-03-14T18:13:45Z" finished-at="2016-03-14T18:13:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCommitCanSucceedWhenChannelDisconnected -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="afterMethod" is-config="true" duration-ms="0" started-at="2016-03-14T18:13:46Z" finished-at="2016-03-14T18:13:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="beforeMethod" is-config="true" duration-ms="5" started-at="2016-03-14T18:13:46Z" finished-at="2016-03-14T18:13:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testCommitCanSucceedWithMultipleTimeouts()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="testCommitCanSucceedWithMultipleTimeouts" duration-ms="1329" started-at="2016-03-14T18:13:46Z" finished-at="2016-03-14T18:13:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCommitCanSucceedWithMultipleTimeouts -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="afterMethod" is-config="true" duration-ms="0" started-at="2016-03-14T18:13:47Z" finished-at="2016-03-14T18:13:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="beforeMethod" is-config="true" duration-ms="4" started-at="2016-03-14T18:13:47Z" finished-at="2016-03-14T18:13:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testCommitFailWhenTSOIsDown()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="testCommitFailWhenTSOIsDown" duration-ms="1464" started-at="2016-03-14T18:13:47Z" finished-at="2016-03-14T18:13:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCommitFailWhenTSOIsDown -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="afterMethod" is-config="true" duration-ms="1" started-at="2016-03-14T18:13:49Z" finished-at="2016-03-14T18:13:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="beforeMethod" is-config="true" duration-ms="24" started-at="2016-03-14T18:13:49Z" finished-at="2016-03-14T18:13:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testCommitGetsServiceUnavailableExceptionWhenCommunicationFails()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="testCommitGetsServiceUnavailableExceptionWhenCommunicationFails" duration-ms="430" started-at="2016-03-14T18:13:49Z" finished-at="2016-03-14T18:13:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCommitGetsServiceUnavailableExceptionWhenCommunicationFails -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="afterMethod" is-config="true" duration-ms="1" started-at="2016-03-14T18:13:49Z" finished-at="2016-03-14T18:13:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="beforeMethod" is-config="true" duration-ms="2" started-at="2016-03-14T18:13:49Z" finished-at="2016-03-14T18:13:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testCommitTimestampNotPresentInCommitTableReturnsAnAbort()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="testCommitTimestampNotPresentInCommitTableReturnsAnAbort" duration-ms="450" started-at="2016-03-14T18:13:49Z" finished-at="2016-03-14T18:13:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCommitTimestampNotPresentInCommitTableReturnsAnAbort -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="beforeMethod" is-config="true" duration-ms="4" started-at="2016-03-14T18:13:50Z" finished-at="2016-03-14T18:13:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="afterMethod" is-config="true" duration-ms="0" started-at="2016-03-14T18:13:50Z" finished-at="2016-03-14T18:13:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="testCommitTimestampPresentInCommitTableReturnsCommit()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="testCommitTimestampPresentInCommitTableReturnsCommit" duration-ms="289" started-at="2016-03-14T18:13:50Z" finished-at="2016-03-14T18:13:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCommitTimestampPresentInCommitTableReturnsCommit -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="afterMethod" is-config="true" duration-ms="0" started-at="2016-03-14T18:13:50Z" finished-at="2016-03-14T18:13:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="beforeMethod" is-config="true" duration-ms="2" started-at="2016-03-14T18:13:50Z" finished-at="2016-03-14T18:13:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testDuplicateCommit()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="testDuplicateCommit" duration-ms="156" started-at="2016-03-14T18:13:50Z" finished-at="2016-03-14T18:13:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDuplicateCommit -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="beforeMethod" is-config="true" duration-ms="2" started-at="2016-03-14T18:13:50Z" finished-at="2016-03-14T18:13:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="afterMethod" is-config="true" duration-ms="0" started-at="2016-03-14T18:13:50Z" finished-at="2016-03-14T18:13:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="testDuplicateCommitAborting()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="testDuplicateCommitAborting" duration-ms="124" started-at="2016-03-14T18:13:50Z" finished-at="2016-03-14T18:13:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDuplicateCommitAborting -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="afterMethod" is-config="true" duration-ms="0" started-at="2016-03-14T18:13:50Z" finished-at="2016-03-14T18:13:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="beforeMethod" is-config="true" duration-ms="2" started-at="2016-03-14T18:13:50Z" finished-at="2016-03-14T18:13:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testHandshakeBetweenOldClientAndCurrentServer()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="testHandshakeBetweenOldClientAndCurrentServer" duration-ms="18" started-at="2016-03-14T18:13:50Z" finished-at="2016-03-14T18:13:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHandshakeBetweenOldClientAndCurrentServer -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="afterMethod" is-config="true" duration-ms="0" started-at="2016-03-14T18:13:50Z" finished-at="2016-03-14T18:13:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="beforeMethod" is-config="true" duration-ms="2" started-at="2016-03-14T18:13:50Z" finished-at="2016-03-14T18:13:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testInvalidCommitTimestampPresentInCommitTableReturnsAbort()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="testInvalidCommitTimestampPresentInCommitTableReturnsAbort" duration-ms="71" started-at="2016-03-14T18:13:50Z" finished-at="2016-03-14T18:13:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidCommitTimestampPresentInCommitTableReturnsAbort -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="afterMethod" is-config="true" duration-ms="0" started-at="2016-03-14T18:13:50Z" finished-at="2016-03-14T18:13:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2016-03-14T18:13:50Z" finished-at="2016-03-14T18:13:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testOutOfOrderMessages()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="testOutOfOrderMessages" duration-ms="93" started-at="2016-03-14T18:13:50Z" finished-at="2016-03-14T18:13:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOutOfOrderMessages -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="afterMethod" is-config="true" duration-ms="1" started-at="2016-03-14T18:13:50Z" finished-at="2016-03-14T18:13:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="beforeMethod" is-config="true" duration-ms="6" started-at="2016-03-14T18:13:50Z" finished-at="2016-03-14T18:13:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testTimeoutsAreCancelled()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="testTimeoutsAreCancelled" duration-ms="924" started-at="2016-03-14T18:13:50Z" finished-at="2016-03-14T18:13:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTimeoutsAreCancelled -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="beforeMethod" is-config="true" duration-ms="13" started-at="2016-03-14T18:13:51Z" finished-at="2016-03-14T18:13:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="afterMethod" is-config="true" duration-ms="0" started-at="2016-03-14T18:13:51Z" finished-at="2016-03-14T18:13:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="testTimestampRequestSucceedWithMultipleTimeouts()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="testTimestampRequestSucceedWithMultipleTimeouts" duration-ms="1032" started-at="2016-03-14T18:13:51Z" finished-at="2016-03-14T18:13:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTimestampRequestSucceedWithMultipleTimeouts -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="tearDown" is-config="true" duration-ms="99" started-at="2016-03-14T18:13:52Z" finished-at="2016-03-14T18:13:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours@5383967b]" name="afterMethod" is-config="true" duration-ms="0" started-at="2016-03-14T18:13:52Z" finished-at="2016-03-14T18:13:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

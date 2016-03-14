@@ -1,0 +1,87 @@
+16/03/14 18:13:04 [main] INFO tso.TestLeaseManager: Starting ZK Server
+ 16/03/14 18:13:05 [main] INFO tso.TestLeaseManager: ZK Server Started @ 127.0.0.1:2181
+ 16/03/14 18:13:05 [main] INFO omid.TestUtils: Creating Zookeeper Client connecting to localhost:2181
+ 16/03/14 18:13:06 [main] INFO omid.TestUtils: Connecting to ZK cluster LATENT
+ 16/03/14 18:13:06 [main] INFO imps.CuratorFrameworkImpl: Starting
+ 16/03/14 18:13:06 [main-EventThread] INFO state.ConnectionStateManager: State change: CONNECTED
+ 16/03/14 18:13:06 [main] INFO omid.TestUtils: Connection to ZK cluster STARTED
+ 16/03/14 18:13:06 [TestNGInvoker-testErrorInitializingTSOStateExitsTheTSO()] INFO tso.LeaseManager: LeaseManager LM1 initialized. Lease period 1000ms
+ 16/03/14 18:13:06 [TestNGInvoker-testErrorInitializingTSOStateExitsTheTSO()] INFO tso.LeaseManager: Path /omid/test0_tsolease ensured
+ 16/03/14 18:13:06 [TestNGInvoker-testErrorInitializingTSOStateExitsTheTSO()] INFO tso.LeaseManager: Path /omid/test0_currenttso ensured
+ 16/03/14 18:13:07 [pool-4-thread-1] INFO tso.LeaseManager: LM1 got the lease (Master) Ver. 1/End of lease: 2016-03-14 18:13:08.651ms
+ 16/03/14 18:13:07 [tso-state-initializer] ERROR tso.MockPanicker: PANICKING: Thread[tso-state-initializer,5,main] threw exception
+ java.io.IOException
+	at com.yahoo.omid.tso.LeaseManager$2.run(LeaseManager.java:145)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+16/03/14 18:13:08 [pool-4-thread-1] INFO tso.LeaseManager: Channel handler closed
+ 16/03/14 18:13:08 [TestNGInvoker-testLeaseHolderChangesWhenActiveLeaseManagerIsPaused()] INFO tso.LeaseManager: LeaseManager LM1 initialized. Lease period 1000ms
+ 16/03/14 18:13:08 [TestNGInvoker-testLeaseHolderChangesWhenActiveLeaseManagerIsPaused()] INFO tso.LeaseManager: Path /omid/test3_tsolease ensured
+ 16/03/14 18:13:08 [TestNGInvoker-testLeaseHolderChangesWhenActiveLeaseManagerIsPaused()] INFO tso.LeaseManager: Path /omid/test3_currenttso ensured
+ 16/03/14 18:13:09 [pool-6-thread-1] INFO tso.LeaseManager: LM1 got the lease (Master) Ver. 1/End of lease: 2016-03-14 18:13:10.694ms
+ 16/03/14 18:13:09 [tso-state-initializer] INFO tso.LeaseManager: TSO instance LM1 (Epoch 1) advertised through ZK
+ 16/03/14 18:13:10 [TestNGInvoker-testLeaseHolderChangesWhenActiveLeaseManagerIsPaused()] INFO tso.LeaseManager: LeaseManager LM2 initialized. Lease period 1000ms
+ 16/03/14 18:13:10 [TestNGInvoker-testLeaseHolderChangesWhenActiveLeaseManagerIsPaused()] INFO tso.LeaseManager: Path /omid/test3_tsolease ensured
+ 16/03/14 18:13:10 [TestNGInvoker-testLeaseHolderChangesWhenActiveLeaseManagerIsPaused()] INFO tso.LeaseManager: Path /omid/test3_currenttso ensured
+ 16/03/14 18:13:11 [pool-6-thread-1] INFO tso.PausableLeaseManager: LM1 paused in stillInLeasePeriod()
+ 16/03/14 18:13:11 [pool-8-thread-1] INFO tso.LeaseManager: LM2 got the lease (Master) Ver. 3/End of lease: 2016-03-14 18:13:12.739ms
+ 16/03/14 18:13:11 [tso-state-initializer] INFO tso.LeaseManager: TSO instance LM2 (Epoch 2) advertised through ZK
+ 16/03/14 18:13:15 [pool-8-thread-1] INFO tso.PausableLeaseManager: LM2 paused in tryToRenewLeasePeriod()
+ 16/03/14 18:13:15 [pool-6-thread-1] INFO tso.LeaseManager: LM1 got the lease (Master) Ver. 8/End of lease: 2016-03-14 18:13:16.752ms
+ 16/03/14 18:13:15 [tso-state-initializer] INFO tso.LeaseManager: TSO instance LM1 (Epoch 3) advertised through ZK
+ 16/03/14 18:13:16 [pool-8-thread-1] WARN tso.LeaseManager: LM2 lost the lease (Ver. 7)! Other instance is now Master
+ 16/03/14 18:13:18 [TestNGInvoker-testLeaseHolderDoesNotChangeWhenANewLeaseManagerIsUp()] INFO tso.LeaseManager: LeaseManager LM1 initialized. Lease period 1000ms
+ 16/03/14 18:13:18 [TestNGInvoker-testLeaseHolderDoesNotChangeWhenANewLeaseManagerIsUp()] INFO tso.LeaseManager: Path /omid/test2_tsolease ensured
+ 16/03/14 18:13:18 [TestNGInvoker-testLeaseHolderDoesNotChangeWhenANewLeaseManagerIsUp()] INFO tso.LeaseManager: Path /omid/test2_currenttso ensured
+ 16/03/14 18:13:19 [pool-10-thread-1] INFO tso.LeaseManager: LM1 got the lease (Master) Ver. 1/End of lease: 2016-03-14 18:13:20.761ms
+ 16/03/14 18:13:19 [tso-state-initializer] INFO tso.LeaseManager: TSO instance LM1 (Epoch 1) advertised through ZK
+ 16/03/14 18:13:20 [TestNGInvoker-testLeaseHolderDoesNotChangeWhenANewLeaseManagerIsUp()] INFO tso.LeaseManager: LeaseManager LM2 initialized. Lease period 1000ms
+ 16/03/14 18:13:20 [TestNGInvoker-testLeaseHolderDoesNotChangeWhenANewLeaseManagerIsUp()] INFO tso.LeaseManager: Path /omid/test2_tsolease ensured
+ 16/03/14 18:13:20 [TestNGInvoker-testLeaseHolderDoesNotChangeWhenANewLeaseManagerIsUp()] INFO tso.LeaseManager: Path /omid/test2_currenttso ensured
+ 16/03/14 18:13:22 [TestNGInvoker-testLeaseHolderDoesNotChangeWhenPausedForALongTimeAndTheresNoOtherInstance()] INFO tso.LeaseManager: LeaseManager LM1 initialized. Lease period 1000ms
+ 16/03/14 18:13:22 [TestNGInvoker-testLeaseHolderDoesNotChangeWhenPausedForALongTimeAndTheresNoOtherInstance()] INFO tso.LeaseManager: Path /omid/test1_tsolease ensured
+ 16/03/14 18:13:22 [TestNGInvoker-testLeaseHolderDoesNotChangeWhenPausedForALongTimeAndTheresNoOtherInstance()] INFO tso.LeaseManager: Path /omid/test1_currenttso ensured
+ 16/03/14 18:13:23 [pool-14-thread-1] INFO tso.LeaseManager: LM1 got the lease (Master) Ver. 1/End of lease: 2016-03-14 18:13:24.815ms
+ 16/03/14 18:13:23 [tso-state-initializer] INFO tso.LeaseManager: TSO instance LM1 (Epoch 1) advertised through ZK
+ 16/03/14 18:13:25 [pool-14-thread-1] INFO tso.PausableLeaseManager: LM1 paused in tryToRenewLeasePeriod()
+ 16/03/14 18:13:26 [pool-14-thread-1] WARN tso.LeaseManager: LM1 expired lease! Releasing lease to start Master re-election
+ 16/03/14 18:13:27 [pool-14-thread-1] INFO tso.LeaseManager: LM1 got the lease (Master) Ver. 4/End of lease: 2016-03-14 18:13:28.820ms
+ 16/03/14 18:13:27 [tso-state-initializer] INFO tso.LeaseManager: TSO instance LM1 (Epoch 1) advertised through ZK
+ 16/03/14 18:13:28 [TestNGInvoker-testLeaseManagerPanicsWhenUnexpectedInfoIsFoundInCurrentTSOZnode()] INFO tso.LeaseManager: LeaseManager LM1 initialized. Lease period 1000ms
+ 16/03/14 18:13:28 [TestNGInvoker-testLeaseManagerPanicsWhenUnexpectedInfoIsFoundInCurrentTSOZnode()] INFO tso.LeaseManager: Path /omid/test_wronginfo_tsolease ensured
+ 16/03/14 18:13:28 [TestNGInvoker-testLeaseManagerPanicsWhenUnexpectedInfoIsFoundInCurrentTSOZnode()] INFO tso.LeaseManager: Path /omid/test_wronginfo_currenttso ensured
+ 16/03/14 18:13:29 [pool-16-thread-1] INFO tso.LeaseManager: LM1 got the lease (Master) Ver. 1/End of lease: 2016-03-14 18:13:30.834ms
+ 16/03/14 18:13:29 [tso-state-initializer] INFO tso.LeaseManager: TSO instance LM1 (Epoch 1) advertised through ZK
+ 16/03/14 18:13:31 [pool-16-thread-1] INFO tso.PausableLeaseManager: LM1 paused in tryToRenewLeasePeriod()
+ 16/03/14 18:13:32 [pool-16-thread-1] WARN tso.LeaseManager: LM1 expired lease! Releasing lease to start Master re-election
+ 16/03/14 18:13:33 [pool-16-thread-1] INFO tso.LeaseManager: LM1 got the lease (Master) Ver. 4/End of lease: 2016-03-14 18:13:34.839ms
+ 16/03/14 18:13:33 [tso-state-initializer] ERROR tso.MockPanicker: PANICKING: Thread[tso-state-initializer,5,main] threw exception
+ java.lang.IllegalArgumentException: Incorrect TSO Info found:  [CorruptedData!!!]
+	at com.google.common.base.Preconditions.checkArgument(Preconditions.java:115)
+	at com.yahoo.omid.tso.LeaseManager.advertiseTSOServerInfoThroughZK(LeaseManager.java:307)
+	at com.yahoo.omid.tso.LeaseManager.access$200(LeaseManager.java:48)
+	at com.yahoo.omid.tso.LeaseManager$2.run(LeaseManager.java:146)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+16/03/14 18:13:35 [pool-16-thread-1] INFO tso.PausableLeaseManager: LM1 paused in tryToRenewLeasePeriod()
+ 16/03/14 18:13:36 [pool-16-thread-1] WARN tso.LeaseManager: LM1 expired lease! Releasing lease to start Master re-election
+ 16/03/14 18:13:37 [pool-16-thread-1] INFO tso.LeaseManager: LM1 got the lease (Master) Ver. 7/End of lease: 2016-03-14 18:13:38.841ms
+ 16/03/14 18:13:37 [tso-state-initializer] ERROR tso.MockPanicker: PANICKING: Thread[tso-state-initializer,5,main] threw exception
+ com.yahoo.omid.tso.LeaseManagement$LeaseManagementException: Another TSO replica was found newTSO:12345#10000
+	at com.yahoo.omid.tso.LeaseManager.advertiseTSOServerInfoThroughZK(LeaseManager.java:310)
+	at com.yahoo.omid.tso.LeaseManager.access$200(LeaseManager.java:48)
+	at com.yahoo.omid.tso.LeaseManager$2.run(LeaseManager.java:146)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+16/03/14 18:13:38 [main] INFO tso.TestLeaseManager: ZK Server Stopped
+ 16/03/14 18:13:39 [pool-6-thread-1] INFO tso.LeaseManager: Channel handler closed
+ 

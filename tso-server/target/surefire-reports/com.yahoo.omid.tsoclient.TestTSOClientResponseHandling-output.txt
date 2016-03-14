@@ -1,0 +1,6 @@
+16/03/14 18:13:21 [main] INFO tso.ProgrammableTSOServer: ********** Dumb TSO Server running on port 4321 **********
+ 16/03/14 18:13:21 [main] INFO tsoclient.TSOClient: Connecting to TSO...
+ 16/03/14 18:13:21 [main] INFO tsoclient.TSOClient: 	* TSO host:port localhost:4321 will be connected directly
+ 16/03/14 18:13:21 [tsofsm-0] INFO tsoclient.TSOClient: Trying to connect to TSO [localhost/127.0.0.1:4321]
+ 16/03/14 18:13:21 [New I/O client worker #1-1] INFO tsoclient.TSOClient: Connection to TSO [localhost/127.0.0.1:4321] established. Channel [id: 0x63f9669c, /127.0.0.1:59315 => localhost/127.0.0.1:4321]
+ 

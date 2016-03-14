@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="24380" started-at="2016-03-14T18:12:31Z" finished-at="2016-03-14T18:12:55Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="24380" started-at="2016-03-14T18:12:31Z" finished-at="2016-03-14T18:12:55Z">
+      <class name="com.yahoo.omid.committable.hbase.TestHBaseCommitTable">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.yahoo.omid.committable.hbase.TestHBaseCommitTable@185d8b6]" name="setUpClass" is-config="true" duration-ms="6665" started-at="2016-03-14T18:12:31Z" finished-at="2016-03-14T18:12:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.yahoo.omid.committable.hbase.TestHBaseCommitTable@185d8b6]" name="setUp" is-config="true" duration-ms="767" started-at="2016-03-14T18:12:37Z" finished-at="2016-03-14T18:12:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testBasicBehaviour()[pri:0, instance:com.yahoo.omid.committable.hbase.TestHBaseCommitTable@185d8b6]" name="testBasicBehaviour" duration-ms="2210" started-at="2016-03-14T18:12:38Z" finished-at="2016-03-14T18:12:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBasicBehaviour -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.yahoo.omid.committable.hbase.TestHBaseCommitTable@185d8b6]" name="tearDown" is-config="true" duration-ms="1374" started-at="2016-03-14T18:12:40Z" finished-at="2016-03-14T18:12:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.yahoo.omid.committable.hbase.TestHBaseCommitTable@185d8b6]" name="setUp" is-config="true" duration-ms="711" started-at="2016-03-14T18:12:42Z" finished-at="2016-03-14T18:12:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testClosingClientEmptyQueuesProperly()[pri:0, instance:com.yahoo.omid.committable.hbase.TestHBaseCommitTable@185d8b6]" name="testClosingClientEmptyQueuesProperly" duration-ms="79" started-at="2016-03-14T18:12:42Z" finished-at="2016-03-14T18:12:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testClosingClientEmptyQueuesProperly -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.yahoo.omid.committable.hbase.TestHBaseCommitTable@185d8b6]" name="tearDown" is-config="true" duration-ms="1307" started-at="2016-03-14T18:12:42Z" finished-at="2016-03-14T18:12:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.yahoo.omid.committable.hbase.TestHBaseCommitTable@185d8b6]" name="setUp" is-config="true" duration-ms="1206" started-at="2016-03-14T18:12:44Z" finished-at="2016-03-14T18:12:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testTransactionInvalidation()[pri:0, instance:com.yahoo.omid.committable.hbase.TestHBaseCommitTable@185d8b6]" name="testTransactionInvalidation" duration-ms="35" started-at="2016-03-14T18:12:45Z" finished-at="2016-03-14T18:12:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTransactionInvalidation -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.yahoo.omid.committable.hbase.TestHBaseCommitTable@185d8b6]" name="tearDown" is-config="true" duration-ms="1300" started-at="2016-03-14T18:12:45Z" finished-at="2016-03-14T18:12:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.yahoo.omid.committable.hbase.TestHBaseCommitTable@185d8b6]" name="tearDownClass" is-config="true" duration-ms="8710" started-at="2016-03-14T18:12:46Z" finished-at="2016-03-14T18:12:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.yahoo.omid.committable.hbase.TestHBaseCommitTable -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="16921" started-at="2016-03-14T18:11:54Z" finished-at="2016-03-14T18:12:11Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="16921" started-at="2016-03-14T18:11:54Z" finished-at="2016-03-14T18:12:11Z">
+      <class name="com.yahoo.omid.timestamp.storage.TestZKTimestampStorage">
+        <test-method status="PASS" signature="initStuff()[pri:0, instance:com.yahoo.omid.timestamp.storage.TestZKTimestampStorage@4cf777e8]" name="initStuff" is-config="true" duration-ms="2361" started-at="2016-03-14T18:11:54Z" finished-at="2016-03-14T18:11:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initStuff -->
+        <test-method status="PASS" signature="testBasicFunctionality()[pri:0, instance:com.yahoo.omid.timestamp.storage.TestZKTimestampStorage@4cf777e8]" name="testBasicFunctionality" duration-ms="67" started-at="2016-03-14T18:11:56Z" finished-at="2016-03-14T18:11:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBasicFunctionality -->
+        <test-method status="PASS" signature="closeStuff()[pri:0, instance:com.yahoo.omid.timestamp.storage.TestZKTimestampStorage@4cf777e8]" name="closeStuff" is-config="true" duration-ms="25" started-at="2016-03-14T18:11:56Z" finished-at="2016-03-14T18:11:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeStuff -->
+        <test-method status="PASS" signature="initStuff()[pri:0, instance:com.yahoo.omid.timestamp.storage.TestZKTimestampStorage@4cf777e8]" name="initStuff" is-config="true" duration-ms="1077" started-at="2016-03-14T18:11:56Z" finished-at="2016-03-14T18:11:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initStuff -->
+        <test-method status="PASS" signature="testZkClientLosingSession()[pri:0, instance:com.yahoo.omid.timestamp.storage.TestZKTimestampStorage@4cf777e8]" name="testZkClientLosingSession" duration-ms="75" started-at="2016-03-14T18:11:57Z" finished-at="2016-03-14T18:11:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testZkClientLosingSession -->
+        <test-method status="PASS" signature="closeStuff()[pri:0, instance:com.yahoo.omid.timestamp.storage.TestZKTimestampStorage@4cf777e8]" name="closeStuff" is-config="true" duration-ms="46" started-at="2016-03-14T18:11:57Z" finished-at="2016-03-14T18:11:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeStuff -->
+        <test-method status="PASS" signature="initStuff()[pri:0, instance:com.yahoo.omid.timestamp.storage.TestZKTimestampStorage@4cf777e8]" name="initStuff" is-config="true" duration-ms="1075" started-at="2016-03-14T18:11:58Z" finished-at="2016-03-14T18:11:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initStuff -->
+        <test-method status="PASS" signature="testZkClientWhenZKIsDownAndRestarts()[pri:0, instance:com.yahoo.omid.timestamp.storage.TestZKTimestampStorage@4cf777e8]" name="testZkClientWhenZKIsDownAndRestarts" duration-ms="12148" started-at="2016-03-14T18:11:59Z" finished-at="2016-03-14T18:12:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testZkClientWhenZKIsDownAndRestarts -->
+        <test-method status="PASS" signature="closeStuff()[pri:0, instance:com.yahoo.omid.timestamp.storage.TestZKTimestampStorage@4cf777e8]" name="closeStuff" is-config="true" duration-ms="15" started-at="2016-03-14T18:12:11Z" finished-at="2016-03-14T18:12:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeStuff -->
+      </class> <!-- com.yahoo.omid.timestamp.storage.TestZKTimestampStorage -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

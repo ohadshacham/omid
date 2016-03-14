@@ -1,0 +1,33 @@
+16/03/14 18:13:00 [main] INFO tso.TSOServer: Iterating over network interfaces, found 'eth0'
+ 16/03/14 18:13:00 [main] INFO tso.PersistenceProcessor: Creating the persist processor with batch size 10000, and timeout 100ms
+ 16/03/14 18:13:00 [main] INFO tso.PersistenceProcessor: Creating the persist processor with batch size 10000, and timeout 100ms
+ 16/03/14 18:13:00 [main] INFO tso.PersistenceProcessor: Creating the persist processor with batch size 10000, and timeout 100ms
+ 16/03/14 18:13:00 [main] INFO tso.PersistenceProcessor: Creating the persist processor with batch size 10000, and timeout 100ms
+ 16/03/14 18:13:01 [persist-1] WARN tso.PersistenceProcessor: Replica localhost:1234 lost mastership after flushig data
+ 16/03/14 18:13:01 [main] INFO tso.TSOServer: Iterating over network interfaces, found 'eth0'
+ 16/03/14 18:13:01 [main] INFO tso.PersistenceProcessor: Creating the persist processor with batch size 10000, and timeout 100ms
+ 16/03/14 18:13:01 [persist-0] WARN tso.PersistenceProcessor: Replica localhost:1234 lost mastership after flushig data
+ 16/03/14 18:13:01 [main] INFO tso.TSOServer: Iterating over network interfaces, found 'eth0'
+ 16/03/14 18:13:01 [main] INFO tso.PersistenceProcessor: Creating the persist processor with batch size 10000, and timeout 100ms
+ 16/03/14 18:13:01 [main] INFO tso.PersistenceProcessor: Creating the persist processor with batch size 10000, and timeout 100ms
+ 16/03/14 18:13:01 [main] INFO tso.PersistenceProcessor: Creating the persist processor with batch size 10000, and timeout 100ms
+ 16/03/14 18:13:01 [main] INFO tso.PersistenceProcessor: Creating the persist processor with batch size 10000, and timeout 100ms
+ 16/03/14 18:13:01 [main] INFO tso.TSOServer: Iterating over network interfaces, found 'eth0'
+ 16/03/14 18:13:02 [main] INFO tso.PersistenceProcessor: Creating the persist processor with batch size 10000, and timeout 100ms
+ 16/03/14 18:13:02 [main] INFO tso.TSOServer: Iterating over network interfaces, found 'eth0'
+ 16/03/14 18:13:02 [main] INFO tso.PersistenceProcessor: Creating the persist processor with batch size 10000, and timeout 100ms
+ 16/03/14 18:13:02 [main] INFO tso.PersistenceProcessor: Creating the persist processor with batch size 10000, and timeout 100ms
+ 16/03/14 18:13:02 [main] INFO tso.PersistenceProcessor: Creating the persist processor with batch size 10000, and timeout 100ms
+ 16/03/14 18:13:02 [main] INFO tso.PersistenceProcessor: Creating the persist processor with batch size 10000, and timeout 100ms
+ 16/03/14 18:13:02 [main] INFO tso.TSOServer: Iterating over network interfaces, found 'eth0'
+ 16/03/14 18:13:02 [main] INFO tso.PersistenceProcessor: Creating the persist processor with batch size 10000, and timeout 100ms
+ 16/03/14 18:13:02 [main] INFO tso.TSOServer: Iterating over network interfaces, found 'eth0'
+ 16/03/14 18:13:02 [main] INFO tso.PersistenceProcessor: Creating the persist processor with batch size 10000, and timeout 100ms
+ 16/03/14 18:13:02 [persist-0] ERROR tso.FatalExceptionHandler: Uncaught exception throws for sequence 0, event com.yahoo.omid.tso.PersistenceProcessorImpl$PersistBatchEvent@79b78bb
+ java.lang.RuntimeException: Kaboom!
+	at com.yahoo.omid.tso.PersistenceProcessorImpl$PersistenceProcessorHandler.onEvent(PersistenceProcessorImpl.java:373)
+	at com.yahoo.omid.tso.PersistenceProcessorImpl$PersistenceProcessorHandler.onEvent(PersistenceProcessorImpl.java:312)
+	at com.lmax.disruptor.WorkProcessor.run(WorkProcessor.java:138)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="397" started-at="2016-03-14T18:11:46Z" finished-at="2016-03-14T18:11:47Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="397" started-at="2016-03-14T18:11:46Z" finished-at="2016-03-14T18:11:47Z">
+      <class name="com.yahoo.omid.tsoclient.TestOmidClientConfiguration">
+        <test-method status="PASS" signature="testYamlReading()[pri:0, instance:com.yahoo.omid.tsoclient.TestOmidClientConfiguration@2f7c7260]" name="testYamlReading" duration-ms="379" started-at="2016-03-14T18:11:46Z" finished-at="2016-03-14T18:11:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testYamlReading -->
+      </class> <!-- com.yahoo.omid.tsoclient.TestOmidClientConfiguration -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

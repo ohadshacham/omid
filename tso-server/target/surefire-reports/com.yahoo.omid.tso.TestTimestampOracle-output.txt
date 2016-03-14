@@ -1,0 +1,4 @@
+16/03/14 18:13:05 [TestNGInvoker-testMonotonicTimestampGrowth()] INFO tso.TimestampOracleImpl: Initializing timestamp oracle with timestamp 0
+ 16/03/14 18:13:05 [TestNGInvoker-testMonotonicTimestampGrowth()] INFO tso.TestTimestampOracle: Last timestamp: 30000001
+ 16/03/14 18:13:05 [TestNGInvoker-testTimestampOraclePanicsWhenTheStorageHasProblems()] INFO tso.TimestampOracleImpl: Initializing timestamp oracle with timestamp 0
+ 
