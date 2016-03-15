@@ -1,0 +1,297 @@
+16/03/15 17:24:37 [main] INFO tso.TSOServer: Iterating over network interfaces, found 'eth0'
+ 16/03/15 17:24:38 [main] INFO tsoclient.TestTSOClientRequestAndResponseBehaviours: ==================================================================================================
+ 16/03/15 17:24:38 [main] INFO tsoclient.TestTSOClientRequestAndResponseBehaviours: ======================================= Init TSO Server ==========================================
+ 16/03/15 17:24:38 [main] INFO tsoclient.TestTSOClientRequestAndResponseBehaviours: ==================================================================================================
+ 16/03/15 17:24:38 [main] INFO tso.ZKModule: Creating Zookeeper Client connecting to localhost:2181
+ 16/03/15 17:24:38 [main] INFO tso.ZKModule: ZK Connection not necessary in this configuration
+ 16/03/15 17:24:39 [main] INFO tso.PersistenceProcessor: Creating the persist processor with batch size 10000, and timeout 100ms
+ 16/03/15 17:24:39 [main] INFO tso.CommitHashMap: CellId -> CommitTS map created with [1000] buckets (32 elems/bucket)
+ 16/03/15 17:24:39 [TSOServer STARTING] INFO tso.TSOStateManagerImpl: Reseting the TSO Server state...
+ 16/03/15 17:24:39 [TSOServer STARTING] INFO tso.TimestampOracleImpl: Initializing timestamp oracle with timestamp 0
+ 16/03/15 17:24:39 [TSOServer STARTING] INFO tso.RequestProcessorImpl: Reseting RequestProcessor...
+ 16/03/15 17:24:39 [TSOServer STARTING] INFO tso.CommitHashMap: CellId -> CommitTS map reset
+ 16/03/15 17:24:39 [TSOServer STARTING] INFO tso.RequestProcessorImpl: RequestProcessor initialized with LWM 0 and Epoch 0
+ 16/03/15 17:24:39 [ts-persist-0] INFO tso.TimestampOracleImpl: Updating max timestamp: (previous:0, new:10000000)
+ 16/03/15 17:24:39 [TSOServer STARTING] INFO tso.TSOStateManagerImpl: New TSO Server state LWM 0/Epoch 0
+ 16/03/15 17:24:39 [TSOServer STARTING] INFO tso.TSOServer: ********** TSO Server running **********
+ 16/03/15 17:24:39 [main] INFO omid.TestUtils: Host localhost:1234 is up...
+ 16/03/15 17:24:39 [main] INFO tsoclient.TestTSOClientRequestAndResponseBehaviours: ==================================================================================================
+ 16/03/15 17:24:39 [main] INFO tsoclient.TestTSOClientRequestAndResponseBehaviours: ===================================== TSO Server Initialized =====================================
+ 16/03/15 17:24:39 [main] INFO tsoclient.TestTSOClientRequestAndResponseBehaviours: ==================================================================================================
+ 16/03/15 17:24:40 [TestNGInvoker-testCommitCanSucceedWhenChannelDisconnected()] INFO tsoclient.TSOClient: Connecting to TSO...
+ 16/03/15 17:24:40 [TestNGInvoker-testCommitCanSucceedWhenChannelDisconnected()] INFO tsoclient.TSOClient: 	* TSO host:port localhost:1234 will be connected directly
+ 16/03/15 17:24:40 [tsofsm-0] INFO tsoclient.TSOClient: Trying to connect to TSO [localhost/127.0.0.1:1234]
+ 16/03/15 17:24:40 [New I/O client worker #1-1] INFO tsoclient.TSOClient: Connection to TSO [localhost/127.0.0.1:1234] established. Channel [id: 0x7829e7dc, /127.0.0.1:47336 => localhost/127.0.0.1:1234]
+ 16/03/15 17:24:40 [tsofsm-0] ERROR tsoclient.TSOClient: Error on channel [id: 0x7829e7dc, /127.0.0.1:47336 :> localhost/127.0.0.1:1234]
+ java.nio.channels.ClosedChannelException
+	at org.jboss.netty.channel.socket.nio.NioWorker.cleanUpWriteBuffer(NioWorker.java:645)
+	at org.jboss.netty.channel.socket.nio.NioWorker.writeFromUserCode(NioWorker.java:372)
+	at org.jboss.netty.channel.socket.nio.NioClientSocketPipelineSink.eventSunk(NioClientSocketPipelineSink.java:117)
+	at org.jboss.netty.channel.Channels.write(Channels.java:632)
+	at org.jboss.netty.handler.codec.oneone.OneToOneEncoder.handleDownstream(OneToOneEncoder.java:70)
+	at org.jboss.netty.channel.Channels.write(Channels.java:632)
+	at org.jboss.netty.handler.codec.oneone.OneToOneEncoder.handleDownstream(OneToOneEncoder.java:70)
+	at org.jboss.netty.channel.Channels.write(Channels.java:611)
+	at org.jboss.netty.channel.Channels.write(Channels.java:578)
+	at org.jboss.netty.channel.AbstractChannel.write(AbstractChannel.java:251)
+	at com.yahoo.omid.tsoclient.TSOClient$ConnectedState.sendRequest(TSOClient.java:658)
+	at com.yahoo.omid.tsoclient.TSOClient$ConnectedState.handleEvent(TSOClient.java:739)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.yahoo.statemachine.StateMachine$State.dispatch(StateMachine.java:104)
+	at com.yahoo.statemachine.StateMachine$FsmImpl.processEvent(StateMachine.java:181)
+	at com.yahoo.statemachine.StateMachine$FsmImpl$FSMRunnable.run(StateMachine.java:203)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+16/03/15 17:24:40 [tsofsm-0] ERROR tsoclient.TSOClient: Unhandled event com.yahoo.omid.tsoclient.TSOClient$ErrorEvent@1215ef67 while in state com.yahoo.omid.tsoclient.TSOClient$DisconnectedState
+ 16/03/15 17:24:40 [tsofsm-0] ERROR tsoclient.TSOClient: Unhandled event com.yahoo.omid.tsoclient.TSOClient$ErrorEvent@30bcf319 while in state com.yahoo.omid.tsoclient.TSOClient$DisconnectedState
+ 16/03/15 17:24:40 [tsofsm-0] INFO tsoclient.TSOClient: Trying to connect to TSO [localhost/127.0.0.1:1234]
+ 16/03/15 17:24:40 [New I/O client worker #1-2] INFO tsoclient.TSOClient: Connection to TSO [localhost/127.0.0.1:1234] established. Channel [id: 0x148cd11c, /127.0.0.1:47343 => localhost/127.0.0.1:1234]
+ 16/03/15 17:24:41 [TestNGInvoker-testCommitCanSucceedWithMultipleTimeouts()] INFO tsoclient.TSOClient: Connecting to TSO...
+ 16/03/15 17:24:41 [TestNGInvoker-testCommitCanSucceedWithMultipleTimeouts()] INFO tsoclient.TSOClient: 	* TSO host:port localhost:1234 will be connected directly
+ 16/03/15 17:24:41 [tsofsm-0] INFO tsoclient.TSOClient: Trying to connect to TSO [localhost/127.0.0.1:1234]
+ 16/03/15 17:24:41 [New I/O client worker #2-1] INFO tsoclient.TSOClient: Connection to TSO [localhost/127.0.0.1:1234] established. Channel [id: 0x3bd7107e, /127.0.0.1:47347 => localhost/127.0.0.1:1234]
+ 16/03/15 17:24:42 [TestNGInvoker-testCommitFailWhenTSOIsDown()] INFO tsoclient.TSOClient: Connecting to TSO...
+ 16/03/15 17:24:42 [TestNGInvoker-testCommitFailWhenTSOIsDown()] INFO tsoclient.TSOClient: 	* TSO host:port localhost:1234 will be connected directly
+ 16/03/15 17:24:42 [tsofsm-0] INFO tsoclient.TSOClient: Trying to connect to TSO [localhost/127.0.0.1:1234]
+ 16/03/15 17:24:42 [New I/O client worker #3-1] INFO tsoclient.TSOClient: Connection to TSO [localhost/127.0.0.1:1234] established. Channel [id: 0x27bf1239, /127.0.0.1:47357 => localhost/127.0.0.1:1234]
+ 16/03/15 17:24:45 [TestNGInvoker-testCommitGetsServiceUnavailableExceptionWhenCommunicationFails()] INFO tsoclient.TSOClient: Connecting to TSO...
+ 16/03/15 17:24:45 [TestNGInvoker-testCommitGetsServiceUnavailableExceptionWhenCommunicationFails()] INFO tsoclient.TSOClient: 	* TSO host:port localhost:1234 will be connected directly
+ 16/03/15 17:24:45 [tsofsm-0] INFO tsoclient.TSOClient: Trying to connect to TSO [localhost/127.0.0.1:1234]
+ 16/03/15 17:24:46 [New I/O client worker #4-1] INFO tsoclient.TSOClient: Connection to TSO [localhost/127.0.0.1:1234] established. Channel [id: 0x55632b9f, /127.0.0.1:47371 => localhost/127.0.0.1:1234]
+ 16/03/15 17:24:46 [New I/O client worker #4-1] ERROR tsoclient.TSOClient: Error on channel [id: 0x55632b9f, /127.0.0.1:47371 :> localhost/127.0.0.1:1234]
+ java.nio.channels.ClosedChannelException
+	at sun.nio.ch.SocketChannelImpl.ensureWriteOpen(SocketChannelImpl.java:270)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:461)
+	at org.jboss.netty.channel.socket.nio.SocketSendBufferPool$PooledSendBuffer.transferTo(SocketSendBufferPool.java:240)
+	at org.jboss.netty.channel.socket.nio.NioWorker.write0(NioWorker.java:472)
+	at org.jboss.netty.channel.socket.nio.NioWorker.writeFromTaskLoop(NioWorker.java:395)
+	at org.jboss.netty.channel.socket.nio.NioSocketChannel$WriteTask.run(NioSocketChannel.java:268)
+	at org.jboss.netty.channel.socket.nio.NioWorker.processWriteTaskQueue(NioWorker.java:270)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:201)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+16/03/15 17:24:46 [New I/O client worker #4-1] ERROR tsoclient.TSOClient: Error on channel [id: 0x55632b9f, /127.0.0.1:47371 :> localhost/127.0.0.1:1234]
+ java.nio.channels.ClosedChannelException
+	at sun.nio.ch.SocketChannelImpl.ensureWriteOpen(SocketChannelImpl.java:270)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:461)
+	at org.jboss.netty.channel.socket.nio.SocketSendBufferPool$PooledSendBuffer.transferTo(SocketSendBufferPool.java:240)
+	at org.jboss.netty.channel.socket.nio.NioWorker.write0(NioWorker.java:472)
+	at org.jboss.netty.channel.socket.nio.NioWorker.writeFromTaskLoop(NioWorker.java:395)
+	at org.jboss.netty.channel.socket.nio.NioSocketChannel$WriteTask.run(NioSocketChannel.java:268)
+	at org.jboss.netty.channel.socket.nio.NioWorker.processWriteTaskQueue(NioWorker.java:270)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:201)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+16/03/15 17:24:46 [New I/O client worker #4-1] ERROR tsoclient.TSOClient: Error on channel [id: 0x55632b9f, /127.0.0.1:47371 :> localhost/127.0.0.1:1234]
+ java.nio.channels.ClosedChannelException
+	at sun.nio.ch.SocketChannelImpl.ensureWriteOpen(SocketChannelImpl.java:270)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:461)
+	at org.jboss.netty.channel.socket.nio.SocketSendBufferPool$PooledSendBuffer.transferTo(SocketSendBufferPool.java:240)
+	at org.jboss.netty.channel.socket.nio.NioWorker.write0(NioWorker.java:472)
+	at org.jboss.netty.channel.socket.nio.NioWorker.writeFromTaskLoop(NioWorker.java:395)
+	at org.jboss.netty.channel.socket.nio.NioSocketChannel$WriteTask.run(NioSocketChannel.java:268)
+	at org.jboss.netty.channel.socket.nio.NioWorker.processWriteTaskQueue(NioWorker.java:270)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:201)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+16/03/15 17:24:46 [New I/O client worker #4-1] ERROR tsoclient.TSOClient: Error on channel [id: 0x55632b9f, /127.0.0.1:47371 :> localhost/127.0.0.1:1234]
+ java.nio.channels.ClosedChannelException
+	at sun.nio.ch.SocketChannelImpl.ensureWriteOpen(SocketChannelImpl.java:270)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:461)
+	at org.jboss.netty.channel.socket.nio.SocketSendBufferPool$PooledSendBuffer.transferTo(SocketSendBufferPool.java:240)
+	at org.jboss.netty.channel.socket.nio.NioWorker.write0(NioWorker.java:472)
+	at org.jboss.netty.channel.socket.nio.NioWorker.writeFromTaskLoop(NioWorker.java:395)
+	at org.jboss.netty.channel.socket.nio.NioSocketChannel$WriteTask.run(NioSocketChannel.java:268)
+	at org.jboss.netty.channel.socket.nio.NioWorker.processWriteTaskQueue(NioWorker.java:270)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:201)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+16/03/15 17:24:46 [New I/O client worker #4-1] ERROR tsoclient.TSOClient: Error on channel [id: 0x55632b9f, /127.0.0.1:47371 :> localhost/127.0.0.1:1234]
+ java.nio.channels.ClosedChannelException
+	at sun.nio.ch.SocketChannelImpl.ensureWriteOpen(SocketChannelImpl.java:270)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:461)
+	at org.jboss.netty.channel.socket.nio.SocketSendBufferPool$PooledSendBuffer.transferTo(SocketSendBufferPool.java:240)
+	at org.jboss.netty.channel.socket.nio.NioWorker.write0(NioWorker.java:472)
+	at org.jboss.netty.channel.socket.nio.NioWorker.writeFromTaskLoop(NioWorker.java:395)
+	at org.jboss.netty.channel.socket.nio.NioSocketChannel$WriteTask.run(NioSocketChannel.java:268)
+	at org.jboss.netty.channel.socket.nio.NioWorker.processWriteTaskQueue(NioWorker.java:270)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:201)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+16/03/15 17:24:46 [New I/O client worker #4-1] ERROR tsoclient.TSOClient: Error on channel [id: 0x55632b9f, /127.0.0.1:47371 :> localhost/127.0.0.1:1234]
+ java.nio.channels.ClosedChannelException
+	at sun.nio.ch.SocketChannelImpl.ensureWriteOpen(SocketChannelImpl.java:270)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:461)
+	at org.jboss.netty.channel.socket.nio.SocketSendBufferPool$PooledSendBuffer.transferTo(SocketSendBufferPool.java:240)
+	at org.jboss.netty.channel.socket.nio.NioWorker.write0(NioWorker.java:472)
+	at org.jboss.netty.channel.socket.nio.NioWorker.writeFromTaskLoop(NioWorker.java:395)
+	at org.jboss.netty.channel.socket.nio.NioSocketChannel$WriteTask.run(NioSocketChannel.java:268)
+	at org.jboss.netty.channel.socket.nio.NioWorker.processWriteTaskQueue(NioWorker.java:270)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:201)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+16/03/15 17:24:46 [New I/O client worker #4-1] ERROR tsoclient.TSOClient: Error on channel [id: 0x55632b9f, /127.0.0.1:47371 :> localhost/127.0.0.1:1234]
+ java.nio.channels.ClosedChannelException
+	at sun.nio.ch.SocketChannelImpl.ensureWriteOpen(SocketChannelImpl.java:270)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:461)
+	at org.jboss.netty.channel.socket.nio.SocketSendBufferPool$PooledSendBuffer.transferTo(SocketSendBufferPool.java:240)
+	at org.jboss.netty.channel.socket.nio.NioWorker.write0(NioWorker.java:472)
+	at org.jboss.netty.channel.socket.nio.NioWorker.writeFromTaskLoop(NioWorker.java:395)
+	at org.jboss.netty.channel.socket.nio.NioSocketChannel$WriteTask.run(NioSocketChannel.java:268)
+	at org.jboss.netty.channel.socket.nio.NioWorker.processWriteTaskQueue(NioWorker.java:270)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:201)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+16/03/15 17:24:46 [New I/O client worker #4-1] ERROR tsoclient.TSOClient: Error on channel [id: 0x55632b9f, /127.0.0.1:47371 :> localhost/127.0.0.1:1234]
+ java.nio.channels.ClosedChannelException
+	at sun.nio.ch.SocketChannelImpl.ensureWriteOpen(SocketChannelImpl.java:270)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:461)
+	at org.jboss.netty.channel.socket.nio.SocketSendBufferPool$PooledSendBuffer.transferTo(SocketSendBufferPool.java:240)
+	at org.jboss.netty.channel.socket.nio.NioWorker.write0(NioWorker.java:472)
+	at org.jboss.netty.channel.socket.nio.NioWorker.writeFromTaskLoop(NioWorker.java:395)
+	at org.jboss.netty.channel.socket.nio.NioSocketChannel$WriteTask.run(NioSocketChannel.java:268)
+	at org.jboss.netty.channel.socket.nio.NioWorker.processWriteTaskQueue(NioWorker.java:270)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:201)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+16/03/15 17:24:46 [main] INFO tsoclient.TSOClient: Connecting to TSO...
+ 16/03/15 17:24:46 [New I/O client worker #4-1] ERROR tsoclient.TSOClient: Error on channel [id: 0x55632b9f, /127.0.0.1:47371 :> localhost/127.0.0.1:1234]
+ java.nio.channels.ClosedChannelException
+	at sun.nio.ch.SocketChannelImpl.ensureWriteOpen(SocketChannelImpl.java:270)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:461)
+	at org.jboss.netty.channel.socket.nio.SocketSendBufferPool$PooledSendBuffer.transferTo(SocketSendBufferPool.java:240)
+	at org.jboss.netty.channel.socket.nio.NioWorker.write0(NioWorker.java:472)
+	at org.jboss.netty.channel.socket.nio.NioWorker.writeFromTaskLoop(NioWorker.java:395)
+	at org.jboss.netty.channel.socket.nio.NioSocketChannel$WriteTask.run(NioSocketChannel.java:268)
+	at org.jboss.netty.channel.socket.nio.NioWorker.processWriteTaskQueue(NioWorker.java:270)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:201)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+16/03/15 17:24:46 [main] INFO tsoclient.TSOClient: 	* TSO host:port localhost:1234 will be connected directly
+ 16/03/15 17:24:46 [New I/O client worker #4-1] ERROR tsoclient.TSOClient: Error on channel [id: 0x55632b9f, /127.0.0.1:47371 :> localhost/127.0.0.1:1234]
+ java.nio.channels.ClosedChannelException
+	at sun.nio.ch.SocketChannelImpl.ensureWriteOpen(SocketChannelImpl.java:270)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:461)
+	at org.jboss.netty.channel.socket.nio.SocketSendBufferPool$PooledSendBuffer.transferTo(SocketSendBufferPool.java:240)
+	at org.jboss.netty.channel.socket.nio.NioWorker.write0(NioWorker.java:472)
+	at org.jboss.netty.channel.socket.nio.NioWorker.writeFromTaskLoop(NioWorker.java:395)
+	at org.jboss.netty.channel.socket.nio.NioSocketChannel$WriteTask.run(NioSocketChannel.java:268)
+	at org.jboss.netty.channel.socket.nio.NioWorker.processWriteTaskQueue(NioWorker.java:270)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:201)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+16/03/15 17:24:46 [tsofsm-0] INFO tsoclient.TSOClient: Trying to connect to TSO [localhost/127.0.0.1:1234]
+ 16/03/15 17:24:46 [New I/O client worker #5-1] INFO tsoclient.TSOClient: Connection to TSO [localhost/127.0.0.1:1234] established. Channel [id: 0x6de798f1, /127.0.0.1:47375 => localhost/127.0.0.1:1234]
+ 16/03/15 17:24:46 [New I/O client worker #6-1] INFO tsoclient.TSOClientRaw: Message received
+ 16/03/15 17:24:46 [New I/O client worker #6-1] INFO tsoclient.TSOClientRaw: Message received
+ 16/03/15 17:24:46 [main] INFO tsoclient.TSOClientRaw: Disconnected
+ 16/03/15 17:24:46 [New I/O client worker #7-1] INFO tsoclient.TSOClientRaw: Message received
+ 16/03/15 17:24:46 [New I/O client worker #7-1] INFO tsoclient.TSOClientRaw: Message received
+ 16/03/15 17:24:46 [main] INFO tsoclient.TSOClientRaw: Disconnected
+ 16/03/15 17:24:46 [main] INFO tsoclient.TSOClient: Connecting to TSO...
+ 16/03/15 17:24:46 [main] INFO tsoclient.TSOClient: 	* TSO host:port localhost:1234 will be connected directly
+ 16/03/15 17:24:46 [tsofsm-0] INFO tsoclient.TSOClient: Trying to connect to TSO [localhost/127.0.0.1:1234]
+ 16/03/15 17:24:46 [New I/O client worker #8-1] INFO tsoclient.TSOClient: Connection to TSO [localhost/127.0.0.1:1234] established. Channel [id: 0x73aa3768, /127.0.0.1:47379 => localhost/127.0.0.1:1234]
+ 16/03/15 17:24:46 [New I/O client worker #9-1] INFO tsoclient.TSOClientRaw: Message received
+ 16/03/15 17:24:46 [New I/O client worker #9-1] INFO tsoclient.TSOClientRaw: Message received
+ 16/03/15 17:24:46 [main] INFO tsoclient.TSOClientRaw: Disconnected
+ 16/03/15 17:24:46 [New I/O client worker #10-1] INFO tsoclient.TSOClientRaw: Message received
+ 16/03/15 17:24:46 [New I/O client worker #10-1] INFO tsoclient.TSOClientRaw: Message received
+ 16/03/15 17:24:46 [main] INFO tsoclient.TSOClientRaw: Disconnected
+ 16/03/15 17:24:46 [TestNGInvoker-testDuplicateCommit()] INFO tsoclient.TSOClient: Connecting to TSO...
+ 16/03/15 17:24:46 [TestNGInvoker-testDuplicateCommit()] INFO tsoclient.TSOClient: 	* TSO host:port localhost:1234 will be connected directly
+ 16/03/15 17:24:46 [tsofsm-0] INFO tsoclient.TSOClient: Trying to connect to TSO [localhost/127.0.0.1:1234]
+ 16/03/15 17:24:46 [New I/O client worker #11-1] INFO tsoclient.TSOClient: Connection to TSO [localhost/127.0.0.1:1234] established. Channel [id: 0x14c21b81, /127.0.0.1:47382 => localhost/127.0.0.1:1234]
+ 16/03/15 17:24:47 [New I/O client worker #12-1] INFO tsoclient.TSOClientRaw: Message received
+ 16/03/15 17:24:47 [New I/O client worker #12-1] INFO tsoclient.TSOClientRaw: Message received
+ 16/03/15 17:24:47 [TestNGInvoker-testDuplicateCommit()] INFO tsoclient.TSOClientRaw: Disconnected
+ 16/03/15 17:24:47 [New I/O client worker #13-1] INFO tsoclient.TSOClientRaw: Message received
+ 16/03/15 17:24:47 [New I/O client worker #13-1] INFO tsoclient.TSOClientRaw: Message received
+ 16/03/15 17:24:47 [TestNGInvoker-testDuplicateCommit()] INFO tsoclient.TSOClientRaw: Disconnected
+ 16/03/15 17:24:47 [TestNGInvoker-testDuplicateCommitAborting()] INFO tsoclient.TSOClient: Connecting to TSO...
+ 16/03/15 17:24:47 [TestNGInvoker-testDuplicateCommitAborting()] INFO tsoclient.TSOClient: 	* TSO host:port localhost:1234 will be connected directly
+ 16/03/15 17:24:47 [tsofsm-0] INFO tsoclient.TSOClient: Trying to connect to TSO [localhost/127.0.0.1:1234]
+ 16/03/15 17:24:47 [New I/O client worker #14-1] INFO tsoclient.TSOClient: Connection to TSO [localhost/127.0.0.1:1234] established. Channel [id: 0x210be86c, /127.0.0.1:47385 => localhost/127.0.0.1:1234]
+ 16/03/15 17:24:47 [New I/O client worker #15-1] INFO tsoclient.TSOClientRaw: Message received
+ 16/03/15 17:24:47 [New I/O client worker #15-1] INFO tsoclient.TSOClientRaw: Message received
+ 16/03/15 17:24:47 [TestNGInvoker-testDuplicateCommitAborting()] INFO tsoclient.TSOClientRaw: Disconnected
+ 16/03/15 17:24:47 [New I/O client worker #16-1] INFO tsoclient.TSOClientRaw: Message received
+ 16/03/15 17:24:47 [New I/O client worker #16-1] INFO tsoclient.TSOClientRaw: Message received
+ 16/03/15 17:24:47 [TestNGInvoker-testDuplicateCommitAborting()] INFO tsoclient.TSOClientRaw: Disconnected
+ 16/03/15 17:24:47 [New I/O server worker #1-9] ERROR tso.TSOChannelHandler: Handshake not completed. Closing channel [id: 0x4e37c729, /127.0.0.1:47388 => /127.0.0.1:1234]
+ 16/03/15 17:24:47 [New I/O client worker #17-1] INFO tsoclient.TSOClientRaw: Disconnected
+ 16/03/15 17:24:47 [main] INFO tsoclient.TSOClient: Connecting to TSO...
+ 16/03/15 17:24:47 [main] INFO tsoclient.TSOClient: 	* TSO host:port localhost:1234 will be connected directly
+ 16/03/15 17:24:47 [reply-0] WARN tso.TSOChannelHandler: ClosedChannelException caught. Cause: 
+ java.nio.channels.ClosedChannelException
+	at org.jboss.netty.channel.socket.nio.NioWorker.cleanUpWriteBuffer(NioWorker.java:645)
+	at org.jboss.netty.channel.socket.nio.NioWorker.writeFromUserCode(NioWorker.java:372)
+	at org.jboss.netty.channel.socket.nio.NioServerSocketPipelineSink.handleAcceptedSocket(NioServerSocketPipelineSink.java:137)
+	at org.jboss.netty.channel.socket.nio.NioServerSocketPipelineSink.eventSunk(NioServerSocketPipelineSink.java:76)
+	at org.jboss.netty.channel.Channels.write(Channels.java:632)
+	at org.jboss.netty.handler.codec.oneone.OneToOneEncoder.handleDownstream(OneToOneEncoder.java:70)
+	at org.jboss.netty.channel.Channels.write(Channels.java:632)
+	at org.jboss.netty.handler.codec.oneone.OneToOneEncoder.handleDownstream(OneToOneEncoder.java:70)
+	at org.jboss.netty.channel.Channels.write(Channels.java:611)
+	at org.jboss.netty.channel.Channels.write(Channels.java:578)
+	at org.jboss.netty.channel.AbstractChannel.write(AbstractChannel.java:251)
+	at com.yahoo.omid.tso.ReplyProcessorImpl.handleTimestampResponse(ReplyProcessorImpl.java:207)
+	at com.yahoo.omid.tso.ReplyProcessorImpl.handleReplyBatchEvent(ReplyProcessorImpl.java:110)
+	at com.yahoo.omid.tso.ReplyProcessorImpl.onEvent(ReplyProcessorImpl.java:144)
+	at com.yahoo.omid.tso.ReplyProcessorImpl.onEvent(ReplyProcessorImpl.java:42)
+	at com.lmax.disruptor.BatchEventProcessor.run(BatchEventProcessor.java:133)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+16/03/15 17:24:47 [tsofsm-0] INFO tsoclient.TSOClient: Trying to connect to TSO [localhost/127.0.0.1:1234]
+ 16/03/15 17:24:47 [New I/O client worker #18-1] INFO tsoclient.TSOClient: Connection to TSO [localhost/127.0.0.1:1234] established. Channel [id: 0x287e57c2, /127.0.0.1:47389 => localhost/127.0.0.1:1234]
+ 16/03/15 17:24:47 [New I/O client worker #19-1] INFO tsoclient.TSOClientRaw: Message received
+ 16/03/15 17:24:47 [New I/O client worker #19-1] INFO tsoclient.TSOClientRaw: Message received
+ 16/03/15 17:24:47 [main] INFO tsoclient.TSOClientRaw: Disconnected
+ 16/03/15 17:24:47 [New I/O client worker #20-1] INFO tsoclient.TSOClientRaw: Message received
+ 16/03/15 17:24:47 [New I/O client worker #20-1] INFO tsoclient.TSOClientRaw: Message received
+ 16/03/15 17:24:47 [main] INFO tsoclient.TSOClientRaw: Disconnected
+ 16/03/15 17:24:47 [TestNGInvoker-testOutOfOrderMessages()] INFO tsoclient.TSOClient: Connecting to TSO...
+ 16/03/15 17:24:47 [TestNGInvoker-testOutOfOrderMessages()] INFO tsoclient.TSOClient: 	* TSO host:port localhost:1234 will be connected directly
+ 16/03/15 17:24:47 [tsofsm-0] INFO tsoclient.TSOClient: Trying to connect to TSO [localhost/127.0.0.1:1234]
+ 16/03/15 17:24:47 [New I/O client worker #21-1] INFO tsoclient.TSOClient: Connection to TSO [localhost/127.0.0.1:1234] established. Channel [id: 0x0e0bfe86, /127.0.0.1:47392 => localhost/127.0.0.1:1234]
+ 16/03/15 17:24:47 [New I/O client worker #22-1] INFO tsoclient.TSOClientRaw: Message received
+ 16/03/15 17:24:47 [New I/O client worker #22-1] INFO tsoclient.TSOClientRaw: Message received
+ 16/03/15 17:24:47 [TestNGInvoker-testOutOfOrderMessages()] INFO tsoclient.TSOClientRaw: Disconnected
+ 16/03/15 17:24:47 [New I/O client worker #23-1] INFO tsoclient.TSOClientRaw: Message received
+ 16/03/15 17:24:47 [New I/O client worker #23-1] INFO tsoclient.TSOClientRaw: Message received
+ 16/03/15 17:24:47 [TestNGInvoker-testOutOfOrderMessages()] INFO tsoclient.TSOClientRaw: Disconnected
+ 16/03/15 17:24:47 [TestNGInvoker-testTimeoutsAreCancelled()] INFO tsoclient.TSOClient: Connecting to TSO...
+ 16/03/15 17:24:47 [TestNGInvoker-testTimeoutsAreCancelled()] INFO tsoclient.TSOClient: 	* TSO host:port localhost:1234 will be connected directly
+ 16/03/15 17:24:47 [TestNGInvoker-testTimeoutsAreCancelled()] INFO tsoclient.TestTSOClientRequestAndResponseBehaviours: Request timeout 500 ms; Max retries 5
+ 16/03/15 17:24:47 [tsofsm-0] INFO tsoclient.TSOClient: Trying to connect to TSO [localhost/127.0.0.1:1234]
+ 16/03/15 17:24:47 [New I/O client worker #24-1] INFO tsoclient.TSOClient: Connection to TSO [localhost/127.0.0.1:1234] established. Channel [id: 0x27c209f7, /127.0.0.1:47395 => localhost/127.0.0.1:1234]
+ 16/03/15 17:24:52 [TestNGInvoker-testTimeoutsAreCancelled()] INFO tsoclient.TestTSOClientRequestAndResponseBehaviours: Sleeping for 375 ms
+ 16/03/15 17:24:52 [TestNGInvoker-testTimeoutsAreCancelled()] INFO tsoclient.TestTSOClientRequestAndResponseBehaviours: Sleeping for 450 ms
+ 16/03/15 17:24:53 [TestNGInvoker-testTimeoutsAreCancelled()] INFO tsoclient.TestTSOClientRequestAndResponseBehaviours: Resuming
+ 16/03/15 17:24:53 [TestNGInvoker-testTimestampRequestSucceedWithMultipleTimeouts()] INFO tsoclient.TSOClient: Connecting to TSO...
+ 16/03/15 17:24:53 [TestNGInvoker-testTimestampRequestSucceedWithMultipleTimeouts()] INFO tsoclient.TSOClient: 	* TSO host:port localhost:1234 will be connected directly
+ 16/03/15 17:24:53 [tsofsm-0] INFO tsoclient.TSOClient: Trying to connect to TSO [localhost/127.0.0.1:1234]
+ 16/03/15 17:24:53 [New I/O client worker #25-1] INFO tsoclient.TSOClient: Connection to TSO [localhost/127.0.0.1:1234] established. Channel [id: 0x018f956a, /127.0.0.1:47396 => localhost/127.0.0.1:1234]
+ 16/03/15 17:24:54 [TSOServer STOPPING] INFO tso.TSOServer: ********** TSO Server stopped successfully **********
+ 

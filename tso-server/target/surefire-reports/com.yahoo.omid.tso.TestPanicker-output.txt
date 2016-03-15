@@ -1,0 +1,48 @@
+16/03/15 17:24:04 [main] INFO tso.TSOServer: Iterating over network interfaces, found 'eth0'
+ 16/03/15 17:24:04 [main] INFO tso.PersistenceProcessor: Creating the persist processor with batch size 10000, and timeout 100ms
+ 16/03/15 17:24:04 [main] INFO tso.CommitHashMap: CellId -> CommitTS map created with [0] buckets (32 elems/bucket)
+ 16/03/15 17:24:04 [persist-0] ERROR tso.MockPanicker: PANICKING: Error persisting commit batch
+ 16/03/15 17:24:04 [persist-0] ERROR tso.FatalExceptionHandler: Uncaught exception throws for sequence 0, event com.yahoo.omid.tso.PersistenceProcessorImpl$PersistBatchEvent@2d6341be
+ java.lang.NullPointerException
+	at com.yahoo.omid.tso.PersistenceProcessorImpl$PersistenceProcessorHandler.flush(PersistenceProcessorImpl.java:408)
+	at com.yahoo.omid.tso.PersistenceProcessorImpl$PersistenceProcessorHandler.onEvent(PersistenceProcessorImpl.java:387)
+	at com.yahoo.omid.tso.PersistenceProcessorImpl$PersistenceProcessorHandler.onEvent(PersistenceProcessorImpl.java:312)
+	at com.lmax.disruptor.WorkProcessor.run(WorkProcessor.java:138)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+16/03/15 17:24:04 [persist-0] ERROR tso.MockPanicker: PANICKING: Uncaught exception in disruptor thread
+ java.lang.NullPointerException
+	at com.yahoo.omid.tso.PersistenceProcessorImpl$PersistenceProcessorHandler.flush(PersistenceProcessorImpl.java:408)
+	at com.yahoo.omid.tso.PersistenceProcessorImpl$PersistenceProcessorHandler.onEvent(PersistenceProcessorImpl.java:387)
+	at com.yahoo.omid.tso.PersistenceProcessorImpl$PersistenceProcessorHandler.onEvent(PersistenceProcessorImpl.java:312)
+	at com.lmax.disruptor.WorkProcessor.run(WorkProcessor.java:138)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+16/03/15 17:24:04 [main] INFO tso.TSOServer: Iterating over network interfaces, found 'eth0'
+ 16/03/15 17:24:04 [main] INFO tso.PersistenceProcessor: Creating the persist processor with batch size 10000, and timeout 100ms
+ 16/03/15 17:24:04 [main] INFO tso.CommitHashMap: CellId -> CommitTS map created with [0] buckets (32 elems/bucket)
+ 16/03/15 17:24:04 [persist-0] ERROR tso.FatalExceptionHandler: Uncaught exception throws for sequence 0, event com.yahoo.omid.tso.PersistenceProcessorImpl$PersistBatchEvent@34a5a276
+ java.lang.RuntimeException: Kaboom!
+	at com.yahoo.omid.tso.PersistenceProcessorImpl$PersistenceProcessorHandler.onEvent(PersistenceProcessorImpl.java:373)
+	at com.yahoo.omid.tso.PersistenceProcessorImpl$PersistenceProcessorHandler.onEvent(PersistenceProcessorImpl.java:312)
+	at com.lmax.disruptor.WorkProcessor.run(WorkProcessor.java:138)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+16/03/15 17:24:04 [persist-0] ERROR tso.MockPanicker: PANICKING: Uncaught exception in disruptor thread
+ java.lang.RuntimeException: Kaboom!
+	at com.yahoo.omid.tso.PersistenceProcessorImpl$PersistenceProcessorHandler.onEvent(PersistenceProcessorImpl.java:373)
+	at com.yahoo.omid.tso.PersistenceProcessorImpl$PersistenceProcessorHandler.onEvent(PersistenceProcessorImpl.java:312)
+	at com.lmax.disruptor.WorkProcessor.run(WorkProcessor.java:138)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+16/03/15 17:24:04 [main] INFO tso.TimestampOracleImpl: Initializing timestamp oracle with timestamp 0
+ 16/03/15 17:24:04 [ts-persist-0] ERROR tso.MockPanicker: PANICKING: Can't store the new max timestamp
+ java.lang.RuntimeException: Out of memory
+	at com.yahoo.omid.tso.TimestampOracleImpl$AllocateTimestampBatchTask.run(TimestampOracleImpl.java:72)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)

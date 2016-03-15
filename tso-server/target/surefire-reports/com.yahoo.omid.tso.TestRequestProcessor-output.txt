@@ -1,0 +1,35 @@
+16/03/15 17:23:55 [main] INFO tso.TSOServer: Iterating over network interfaces, found 'eth0'
+ 16/03/15 17:23:55 [main] INFO tso.CommitHashMap: CellId -> CommitTS map created with [1000] buckets (32 elems/bucket)
+ 16/03/15 17:23:55 [main] INFO tso.TSOStateManagerImpl: Reseting the TSO Server state...
+ 16/03/15 17:23:55 [main] INFO tso.TimestampOracleImpl: Initializing timestamp oracle with timestamp 0
+ 16/03/15 17:23:55 [main] INFO tso.RequestProcessorImpl: Reseting RequestProcessor...
+ 16/03/15 17:23:55 [main] INFO tso.CommitHashMap: CellId -> CommitTS map reset
+ 16/03/15 17:23:55 [main] INFO tso.RequestProcessorImpl: RequestProcessor initialized with LWM 0 and Epoch 0
+ 16/03/15 17:23:55 [main] INFO tso.TSOStateManagerImpl: New TSO Server state LWM 0/Epoch 0
+ 16/03/15 17:23:55 [ts-persist-0] INFO tso.TimestampOracleImpl: Updating max timestamp: (previous:0, new:10000000)
+ 16/03/15 17:23:55 [main] INFO tso.TSOServer: Iterating over network interfaces, found 'eth0'
+ 16/03/15 17:23:55 [main] INFO tso.CommitHashMap: CellId -> CommitTS map created with [1000] buckets (32 elems/bucket)
+ 16/03/15 17:23:55 [main] INFO tso.TSOStateManagerImpl: Reseting the TSO Server state...
+ 16/03/15 17:23:55 [main] INFO tso.TimestampOracleImpl: Initializing timestamp oracle with timestamp 0
+ 16/03/15 17:23:55 [main] INFO tso.RequestProcessorImpl: Reseting RequestProcessor...
+ 16/03/15 17:23:55 [main] INFO tso.CommitHashMap: CellId -> CommitTS map reset
+ 16/03/15 17:23:55 [main] INFO tso.RequestProcessorImpl: RequestProcessor initialized with LWM 0 and Epoch 0
+ 16/03/15 17:23:55 [main] INFO tso.TSOStateManagerImpl: New TSO Server state LWM 0/Epoch 0
+ 16/03/15 17:23:55 [ts-persist-0] INFO tso.TimestampOracleImpl: Updating max timestamp: (previous:0, new:10000000)
+ 16/03/15 17:23:55 [TestNGInvoker-testCommitRequestAbortsWhenResettingRequestProcessorState()] INFO tso.TSOStateManagerImpl: Reseting the TSO Server state...
+ 16/03/15 17:23:55 [TestNGInvoker-testCommitRequestAbortsWhenResettingRequestProcessorState()] INFO tso.TimestampOracleImpl: Initializing timestamp oracle with timestamp 10000000
+ 16/03/15 17:23:55 [ts-persist-0] INFO tso.TimestampOracleImpl: Updating max timestamp: (previous:10000000, new:20000000)
+ 16/03/15 17:23:55 [TestNGInvoker-testCommitRequestAbortsWhenResettingRequestProcessorState()] INFO tso.RequestProcessorImpl: Reseting RequestProcessor...
+ 16/03/15 17:23:55 [TestNGInvoker-testCommitRequestAbortsWhenResettingRequestProcessorState()] INFO tso.CommitHashMap: CellId -> CommitTS map reset
+ 16/03/15 17:23:55 [TestNGInvoker-testCommitRequestAbortsWhenResettingRequestProcessorState()] INFO tso.RequestProcessorImpl: RequestProcessor initialized with LWM 10000000 and Epoch 10000000
+ 16/03/15 17:23:55 [TestNGInvoker-testCommitRequestAbortsWhenResettingRequestProcessorState()] INFO tso.TSOStateManagerImpl: New TSO Server state LWM 10000000/Epoch 10000000
+ 16/03/15 17:23:55 [main] INFO tso.TSOServer: Iterating over network interfaces, found 'eth0'
+ 16/03/15 17:23:55 [main] INFO tso.CommitHashMap: CellId -> CommitTS map created with [1000] buckets (32 elems/bucket)
+ 16/03/15 17:23:55 [main] INFO tso.TSOStateManagerImpl: Reseting the TSO Server state...
+ 16/03/15 17:23:55 [main] INFO tso.TimestampOracleImpl: Initializing timestamp oracle with timestamp 0
+ 16/03/15 17:23:55 [main] INFO tso.RequestProcessorImpl: Reseting RequestProcessor...
+ 16/03/15 17:23:55 [main] INFO tso.CommitHashMap: CellId -> CommitTS map reset
+ 16/03/15 17:23:55 [ts-persist-0] INFO tso.TimestampOracleImpl: Updating max timestamp: (previous:0, new:10000000)
+ 16/03/15 17:23:55 [main] INFO tso.RequestProcessorImpl: RequestProcessor initialized with LWM 0 and Epoch 0
+ 16/03/15 17:23:55 [main] INFO tso.TSOStateManagerImpl: New TSO Server state LWM 0/Epoch 0
+ 

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.818 sec - in com.yahoo.omid.tsoclient.TestTSOClientRequestAndResponseBehaviours

@@ -1,0 +1,21 @@
+-------------------------------------------------------------------------------
+Test set: com.yahoo.omid.tso.TestPersistenceProcessor
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.274 sec <<< FAILURE! - in com.yahoo.omid.tso.TestPersistenceProcessor
+testCommitPersistenceWithHALeaseManager(com.yahoo.omid.tso.TestPersistenceProcessor)  Time elapsed: 0.202 sec  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+batch.sendReply(<any>, <any>, <any>, false);
+-> at com.yahoo.omid.tso.TestPersistenceProcessor.testCommitPersistenceWithHALeaseManagerPerConfig(TestPersistenceProcessor.java:244)
+
+However, there were other interactions with this mock:
+-> at com.yahoo.omid.tso.PersistenceProcessorImpl.persistCommit(PersistenceProcessorImpl.java:184)
+-> at com.yahoo.omid.tso.PersistenceProcessorImpl.persistCommit(PersistenceProcessorImpl.java:185)
+-> at com.yahoo.omid.tso.PersistenceProcessorImpl.persistFlush(PersistenceProcessorImpl.java:173)
+-> at com.yahoo.omid.tso.PersistenceProcessorImpl$PersistenceProcessorHandler.onEvent(PersistenceProcessorImpl.java:366)
+-> at com.yahoo.omid.tso.PersistenceProcessorImpl$PersistenceProcessorHandler.flush(PersistenceProcessorImpl.java:408)
+
+	at com.yahoo.omid.tso.TestPersistenceProcessor.testCommitPersistenceWithHALeaseManagerPerConfig(TestPersistenceProcessor.java:244)
+	at com.yahoo.omid.tso.TestPersistenceProcessor.testCommitPersistenceWithHALeaseManager(TestPersistenceProcessor.java:201)
+

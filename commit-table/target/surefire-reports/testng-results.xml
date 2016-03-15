@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="35" started-at="2016-03-15T17:22:49Z" finished-at="2016-03-15T17:22:49Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="35" started-at="2016-03-15T17:22:49Z" finished-at="2016-03-15T17:22:49Z">
+      <class name="com.yahoo.omid.committable.NullCommitTableTest">
+        <test-method status="PASS" signature="testClientAndWriter()[pri:0, instance:com.yahoo.omid.committable.NullCommitTableTest@23223dd8]" name="testClientAndWriter" duration-ms="25" started-at="2016-03-15T17:22:49Z" finished-at="2016-03-15T17:22:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testClientAndWriter -->
+      </class> <!-- com.yahoo.omid.committable.NullCommitTableTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

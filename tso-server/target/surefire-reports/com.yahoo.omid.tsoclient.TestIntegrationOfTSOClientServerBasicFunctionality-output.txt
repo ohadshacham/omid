@@ -1,0 +1,36 @@
+16/03/15 17:24:19 [main] INFO tso.TSOServer: Iterating over network interfaces, found 'eth0'
+ 16/03/15 17:24:20 [main] INFO tsoclient.TestIntegrationOfTSOClientServerBasicFunctionality: ==================================================================================================
+ 16/03/15 17:24:20 [main] INFO tsoclient.TestIntegrationOfTSOClientServerBasicFunctionality: ======================================= Init TSO Server ==========================================
+ 16/03/15 17:24:20 [main] INFO tsoclient.TestIntegrationOfTSOClientServerBasicFunctionality: ==================================================================================================
+ 16/03/15 17:24:20 [main] INFO tso.ZKModule: Creating Zookeeper Client connecting to localhost:2181
+ 16/03/15 17:24:20 [main] INFO tso.ZKModule: ZK Connection not necessary in this configuration
+ 16/03/15 17:24:20 [main] INFO tso.PersistenceProcessor: Creating the persist processor with batch size 10000, and timeout 100ms
+ 16/03/15 17:24:20 [main] INFO tso.CommitHashMap: CellId -> CommitTS map created with [1000] buckets (32 elems/bucket)
+ 16/03/15 17:24:20 [TSOServer STARTING] INFO tso.TSOStateManagerImpl: Reseting the TSO Server state...
+ 16/03/15 17:24:20 [TSOServer STARTING] INFO tso.TimestampOracleImpl: Initializing timestamp oracle with timestamp 0
+ 16/03/15 17:24:20 [TSOServer STARTING] INFO tso.RequestProcessorImpl: Reseting RequestProcessor...
+ 16/03/15 17:24:20 [TSOServer STARTING] INFO tso.CommitHashMap: CellId -> CommitTS map reset
+ 16/03/15 17:24:20 [TSOServer STARTING] INFO tso.RequestProcessorImpl: RequestProcessor initialized with LWM 0 and Epoch 0
+ 16/03/15 17:24:20 [TSOServer STARTING] INFO tso.TSOStateManagerImpl: New TSO Server state LWM 0/Epoch 0
+ 16/03/15 17:24:20 [ts-persist-0] INFO tso.TimestampOracleImpl: Updating max timestamp: (previous:0, new:10000000)
+ 16/03/15 17:24:20 [TSOServer STARTING] INFO tso.TSOServer: ********** TSO Server running **********
+ 16/03/15 17:24:20 [main] INFO omid.TestUtils: Host localhost:44891 is up...
+ 16/03/15 17:24:20 [main] INFO tsoclient.TestIntegrationOfTSOClientServerBasicFunctionality: ==================================================================================================
+ 16/03/15 17:24:20 [main] INFO tsoclient.TestIntegrationOfTSOClientServerBasicFunctionality: ===================================== TSO Server Initialized =====================================
+ 16/03/15 17:24:20 [main] INFO tsoclient.TestIntegrationOfTSOClientServerBasicFunctionality: ==================================================================================================
+ 16/03/15 17:24:20 [main] INFO tsoclient.TestIntegrationOfTSOClientServerBasicFunctionality: ==================================================================================================
+ 16/03/15 17:24:20 [main] INFO tsoclient.TestIntegrationOfTSOClientServerBasicFunctionality: ======================================= Setup TSO Clients ========================================
+ 16/03/15 17:24:20 [main] INFO tsoclient.TestIntegrationOfTSOClientServerBasicFunctionality: ==================================================================================================
+ 16/03/15 17:24:20 [main] INFO tsoclient.TSOClient: Connecting to TSO...
+ 16/03/15 17:24:20 [main] INFO tsoclient.TSOClient: 	* TSO host:port localhost:44891 will be connected directly
+ 16/03/15 17:24:20 [main] INFO tsoclient.TSOClient: Connecting to TSO...
+ 16/03/15 17:24:20 [main] INFO tsoclient.TSOClient: 	* TSO host:port localhost:44891 will be connected directly
+ 16/03/15 17:24:20 [main] INFO tsoclient.TestIntegrationOfTSOClientServerBasicFunctionality: ==================================================================================================
+ 16/03/15 17:24:20 [main] INFO tsoclient.TestIntegrationOfTSOClientServerBasicFunctionality: ===================================== TSO Clients Initialized ====================================
+ 16/03/15 17:24:20 [main] INFO tsoclient.TestIntegrationOfTSOClientServerBasicFunctionality: ==================================================================================================
+ 16/03/15 17:24:20 [tsofsm-0] INFO tsoclient.TSOClient: Trying to connect to TSO [localhost/127.0.0.1:44891]
+ 16/03/15 17:24:20 [New I/O client worker #1-1] INFO tsoclient.TSOClient: Connection to TSO [localhost/127.0.0.1:44891] established. Channel [id: 0x79a60513, /127.0.0.1:54543 => localhost/127.0.0.1:44891]
+ 16/03/15 17:24:21 [tsofsm-0] INFO tsoclient.TSOClient: Trying to connect to TSO [localhost/127.0.0.1:44891]
+ 16/03/15 17:24:21 [New I/O client worker #2-1] INFO tsoclient.TSOClient: Connection to TSO [localhost/127.0.0.1:44891] established. Channel [id: 0x2c039ee7, /127.0.0.1:54544 => localhost/127.0.0.1:44891]
+ 16/03/15 17:24:24 [TSOServer STOPPING] INFO tso.TSOServer: ********** TSO Server stopped successfully **********
+ 
